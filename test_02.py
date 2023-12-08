@@ -1,1 +1,3 @@
-This is a test file
+def main():
+    print("Hello World!")
+
