@@ -38,7 +38,7 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         Vector2 inputVector = GetMovementVectorNormalized();
-
+        
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
         float moveDistance = playerSpeed * Time.deltaTime;
