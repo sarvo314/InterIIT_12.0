@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float jumpForce = 20f;
     private Rigidbody playerRb;
     private bool canJump = true;
+    private bool isWalking;
 
     private EventHandler OnJump;
     private PlayerInputActions playerMovement;
@@ -41,6 +42,8 @@ public class Player : MonoBehaviour
         
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
+        isWalking = moveDir != Vector3.zero;
+
         float moveDistance = playerSpeed * Time.deltaTime;
         float playerRadius = 0.9f;
         float playerHeight = 2f;
@@ -56,13 +59,16 @@ public class Player : MonoBehaviour
 
     private void HandleJumping()
     {
-        Debug.Log(canJump);
-        Debug.Log("Jump called");
         if (canJump)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             canJump = false;
         }
+    }
+
+    public bool IsWalking()
+    {
+        return isWalking;
     }
     private void Update()
     {
