@@ -11,8 +11,8 @@ public class Player : MonoBehaviour
     private bool canJump = true;
     private bool isWalking;
 
-    private EventHandler OnJump;
     private PlayerInputActions playerMovement;
+
     private void Awake()
     {
         playerMovement = new PlayerInputActions();
@@ -24,11 +24,14 @@ public class Player : MonoBehaviour
     {
         playerMovement.Player.Jump.performed += _ => HandleJumping();
     }
+
+    // To check whether on ground
     private void OnCollisionEnter(Collision collision)
     {
         canJump = true;
     }
-    public Vector2 GetMovementVectorNormalized()
+
+    private Vector2 GetMovementVectorNormalized()
     {
         Vector2 inputVector = playerMovement.Player.Move.ReadValue<Vector2>();
 
@@ -42,8 +45,10 @@ public class Player : MonoBehaviour
         
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
+        // For animation
         isWalking = moveDir != Vector3.zero;
 
+        // For interaction
         float moveDistance = playerSpeed * Time.deltaTime;
         float playerRadius = 0.9f;
         float playerHeight = 2f;
@@ -66,6 +71,7 @@ public class Player : MonoBehaviour
         }
     }
 
+    // public for PlayerAnimator to access
     public bool IsWalking()
     {
         return isWalking;
