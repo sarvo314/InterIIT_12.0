@@ -6,7 +6,7 @@ using UnityEngine;
 
 public class BreakableTile : MonoBehaviour
 {
-    public static event EventHandler OnTileBreak;
+    public event EventHandler OnTileBreak;
     [SerializeField]
     private ParticleSystem breakEffect;
     [SerializeField]
