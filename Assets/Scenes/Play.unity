@@ -554,6 +554,7 @@ MonoBehaviour:
   numRows: 10
   numColumns: 10
   distanceBetweenTiles: 10
+  starPrefab: {fileID: 1388765730846040, guid: 409010852d1134147862865a8889b834, type: 3}
 --- !u!4 &880955869
 Transform:
   m_ObjectHideFlags: 0
