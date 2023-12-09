@@ -69,7 +69,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   breakEffect: {fileID: 6634781631830646330, guid: c427a64c67b204c4d99a9c8e16ecc260, type: 3}
   breakSound: {fileID: 8300000, guid: d57c9165024864d18a5afbaf478cc033, type: 3}
-  breakDelay: 1
+  breakDelay: 2
 --- !u!1 &2335236677457339762
 GameObject:
   m_ObjectHideFlags: 0
@@ -132,7 +132,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5d0bf261639de451993f411d79245023, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

@@ -24,7 +24,7 @@ MonoBehaviour:
     value: 1
   softKnee:
     overrideState: 1
-    value: 0.584
+    value: 0.195
   clamp:
     overrideState: 1
     value: 65472
@@ -76,16 +76,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94fcd11afffcb142908bfcb1e261fba, type: 3}
   m_Name: MotionBlur
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 1
   shutterAngle:
     overrideState: 1
-    value: 360
+    value: 28
   sampleCount:
     overrideState: 1
-    value: 29
+    value: 7
 --- !u!114 &5600649923747077521
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -136,7 +136,7 @@ MonoBehaviour:
     defaultState: 1
   intensity:
     overrideState: 1
-    value: 1
+    value: 0.088
   fastMode:
     overrideState: 1
     value: 0

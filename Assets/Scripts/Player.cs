@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         Vector2 inputVector = GetMovementVectorNormalized();
-        
+        inputVector.y = 0; 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
         isWalking = moveDir != Vector3.zero;
