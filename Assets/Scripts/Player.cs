@@ -13,7 +13,6 @@ public class Player : MonoBehaviour
     private bool isWalking;
     [SerializeField]
     private Transform groundCheck;
-    private PlayerInputActions playerMovement;
     [SerializeField]
     private float groundDistance;
     //ground layer should be marked here
@@ -21,14 +20,12 @@ public class Player : MonoBehaviour
 
     private void Awake()
     {
-        playerMovement = new PlayerInputActions();
-        playerMovement.Player.Enable();
         playerRb = GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        playerMovement.Player.Jump.performed += HandleJumping;
+        GameInput.JumpPerformed += HandleJumping;
     }
 
     // To check whether on ground
@@ -44,17 +41,11 @@ public class Player : MonoBehaviour
     }
     
 
-    private Vector2 GetMovementVectorNormalized()
-    {
-        Vector2 inputVector = playerMovement.Player.Move.ReadValue<Vector2>();
-
-        inputVector = inputVector.normalized;
-        return inputVector;
-    }
+    
 
     private void HandleMovement()
     {
-        Vector2 inputVector = GetMovementVectorNormalized();
+        Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
         inputVector.y = 0; 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
 
@@ -75,7 +66,7 @@ public class Player : MonoBehaviour
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }
 
-    private void HandleJumping(InputAction.CallbackContext callbackContext)
+    private void HandleJumping(object sender, EventArgs eventArgs)
     {
         if (isGrounded)
         {

@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,22 +10,20 @@ public class PlayerAnimator : MonoBehaviour
     private Animator animator;
 
     private const string IS_WALKING = "isRunning";
-    private const string CAN_JUMP = "Jump";
-    private PlayerInputActions playerInputActions;
-    private void Awake()
+    private const string JUMP = "Jump";
+    private void Start()
     {
-        playerInputActions = new PlayerInputActions();
-        playerInputActions.Player.Enable();
-        playerInputActions.Player.Jump.performed += Jumped;
+        GameInput.JumpPerformed += Jumped;
         animator = GetComponent<Animator>();
     }
 
-    private void Jumped(InputAction.CallbackContext obj)
+    private void Jumped(object sender, EventArgs eventArgs)
     {
         // if()
-        Debug.Log("Jump animation");
-        if(Player.isGrounded)
-        animator.SetTrigger(CAN_JUMP);
+        if (Player.isGrounded)
+        {
+            animator.SetTrigger(JUMP);
+        }
     }
 
     private void Update()

@@ -6,21 +6,23 @@
   <component name="ChangeListManager">
     <list default="true" id="d07b8f38-2c24-4253-b58f-6ff50cca7add" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FreeDimensionForge/LowPolyEnvironmentsPack/Art/ForestEnvironmentPack/Prefabs/ForestEmptyCube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/FreeDimensionForge/LowPolyEnvironmentsPack/Art/ForestEnvironmentPack/Prefabs/ForestEmptyCube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/(obsolete)Player.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/(obsolete)Player.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Breakable.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Breakable.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/BreakEffect.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VFX/BreakEffect.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/VFX/CollectEffectSample.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/VFX/CollectEffectSample.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System/PlayerInputActions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input System/PlayerInputActions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Input System/PlayerInputActions.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Input System/PlayerInputActions.inputactions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/MainMenu.cs.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (1).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (1).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (2).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (2).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (3).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (3).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (4).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (4).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (5).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (5).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (6).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (6).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (7).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (7).asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/TileGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/TileGenerator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileGenerator.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/TileGenerator.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,10 +33,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/GameInput.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/MainMenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mimic/Scripts/Mimic.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BreakableTile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TeleportSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/TileGenerator.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -116,7 +120,8 @@
       <workItem from="1702057847099" duration="4831000" />
       <workItem from="1702103167185" duration="7483000" />
       <workItem from="1702139160432" duration="2722000" />
-      <workItem from="1702144139072" duration="1798000" />
+      <workItem from="1702144139072" duration="2424000" />
+      <workItem from="1702150804225" duration="2666000" />
     </task>
     <servers />
   </component>
