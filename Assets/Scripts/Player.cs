@@ -2,16 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float jumpForce = 20f;
     private Rigidbody playerRb;
-    private bool canJump = true;
+    private static bool isGrounded;
     private bool isWalking;
-
+    [SerializeField]
+    private Transform groundCheck;
     private PlayerInputActions playerMovement;
+    [SerializeField]
+    private float groundDistance;
+    //ground layer should be marked here
+    [SerializeField] private LayerMask groundMask;
 
     private void Awake()
     {
@@ -22,14 +28,21 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        playerMovement.Player.Jump.performed += _ => HandleJumping();
+        playerMovement.Player.Jump.performed += HandleJumping;
     }
 
     // To check whether on ground
-    private void OnCollisionEnter(Collision collision)
+    // private void OnCollisionEnter(Collision collision)
+    // {
+    //     if(collision.gameObject.CompareTag("Ground"))
+    //         isGrounded = true;
+    // }
+
+    public bool CanJump()
     {
-        canJump = true;
+        return isGrounded;
     }
+    
 
     private Vector2 GetMovementVectorNormalized()
     {
@@ -52,8 +65,8 @@ public class Player : MonoBehaviour
         float moveDistance = playerSpeed * Time.deltaTime;
         float playerRadius = 0.9f;
         float playerHeight = 2f;
-        bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
-        if (canMove)
+        // bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
+        // if (canMove)
         {
             transform.position += moveDir * Time.deltaTime * playerSpeed;
         }
@@ -62,12 +75,13 @@ public class Player : MonoBehaviour
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
     }
 
-    private void HandleJumping()
+    private void HandleJumping(InputAction.CallbackContext callbackContext)
     {
-        if (canJump)
+        isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
+        if (isGrounded)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            canJump = false;
+            // isGrounded = false;
         }
     }
 
