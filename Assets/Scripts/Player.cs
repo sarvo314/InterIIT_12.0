@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [SerializeField] private float playerSpeed = 5f;
     [SerializeField] private float jumpForce = 20f;
     private Rigidbody playerRb;
-    private static bool isGrounded;
+    public static bool isGrounded;
     private bool isWalking;
     [SerializeField]
     private Transform groundCheck;
@@ -77,11 +77,10 @@ public class Player : MonoBehaviour
 
     private void HandleJumping(InputAction.CallbackContext callbackContext)
     {
-        isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
         if (isGrounded)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            // isGrounded = false;
+            isGrounded = false;
         }
     }
 
@@ -92,6 +91,7 @@ public class Player : MonoBehaviour
     }
     private void Update()
     {
+        isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
         HandleMovement();
     }
 }

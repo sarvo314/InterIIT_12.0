@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8682567274005781669}
   - component: {fileID: 3117095148295561308}
   - component: {fileID: 2794682045737202964}
+  - component: {fileID: 7822699244729752457}
   m_Layer: 8
   m_Name: ForestEmptyCube
   m_TagString: Ground
@@ -105,3 +106,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0.5, z: 0.000000029802322}
+--- !u!114 &7822699244729752457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3710670912749704320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be58b3e6167c14cf6a9257a7ce50bb38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakEffect: {fileID: 6634781631830646330, guid: c427a64c67b204c4d99a9c8e16ecc260, type: 3}
+  breakSound: {fileID: 8300000, guid: d57c9165024864d18a5afbaf478cc033, type: 3}
+  breakDelay: 2

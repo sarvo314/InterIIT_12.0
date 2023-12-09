@@ -13,7 +13,7 @@ public class TileGenerator : MonoBehaviour
 
     void Start()
     {
-        offset = starPrefab.transform.localScale.y / 2;
+        // offset = starPrefab.transform.localScale.y / 2;
         GenerateTiles();
     }
 
@@ -26,8 +26,9 @@ public class TileGenerator : MonoBehaviour
                 Vector3 tilePosition = new Vector3(col * distanceBetweenTiles, 0f, row * distanceBetweenTiles);
                 Instantiate(tilePrefab, tilePosition, Quaternion.identity, transform);
                 //5% probability of instantiating a star
-                if (Random.Range(0f, 1f) > 0.05f)
+                if (starPrefab != null && Random.Range(0f, 1f) > 0.05f)
                 {
+                    
                     Instantiate(starPrefab, tilePosition + Vector3.up*offset, Quaternion.identity, transform);
                 }
             }

@@ -23,6 +23,7 @@ public class PlayerAnimator : MonoBehaviour
     {
         // if()
         Debug.Log("Jump animation");
+        if(Player.isGrounded)
         animator.SetTrigger(CAN_JUMP);
     }
 
