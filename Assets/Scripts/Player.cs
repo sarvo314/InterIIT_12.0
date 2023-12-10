@@ -54,7 +54,10 @@ public class Player : MonoBehaviour
 
         // For animation
         isWalking = moveDir != Vector3.zero;
-
+        if (moveDir != Vector3.zero)
+        {
+            GameManager.isGameStarted = true;
+        }
         // For interaction
         float moveDistance = playerSpeed * Time.deltaTime;
         float playerRadius = 0.9f;

@@ -6,29 +6,33 @@
   <component name="ChangeListManager">
     <list default="true" id="d07b8f38-2c24-4253-b58f-6ff50cca7add" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Mimic.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Mimic.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NavMesh-Tile.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/NavMesh-Tile.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Tile.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (1) 6.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (1) 6.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (10) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (10) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (11) 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (11) 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (12) 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (12) 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (13) 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (13) 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (14) 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (14) 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (15) 2.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (15) 2.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (16) 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (16) 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (17) 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (17) 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (18) 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (18) 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (19) 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (19) 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (2) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (2) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (20) 1.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (20) 1.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (3) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (3) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (4) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (4) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (5) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (5) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (6) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (6) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (7) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (7) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (8) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (8) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (9) 5.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile (9) 5.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile 7.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level/NavMesh-Tile 7.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (1).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (1).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (10).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (10).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (11).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (11).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (12).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (12).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (13).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (13).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (14).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (14).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (15).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (15).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (2).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (2).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (3).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (3).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (4).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (4).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (5).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (5).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (6).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (6).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (7).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (7).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (8).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (8).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (9).asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile (9).asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play/NavMesh-Tile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BreakableTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BreakableTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,9 +43,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/BombSpawner.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Mimic/Scripts/Mimic.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/PlayerMovingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/AudioManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/BreakableTile.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpikeBomb.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -124,7 +131,7 @@
       <workItem from="1702103167185" duration="7483000" />
       <workItem from="1702139160432" duration="2722000" />
       <workItem from="1702144139072" duration="2424000" />
-      <workItem from="1702150804225" duration="7267000" />
+      <workItem from="1702150804225" duration="10334000" />
     </task>
     <servers />
   </component>

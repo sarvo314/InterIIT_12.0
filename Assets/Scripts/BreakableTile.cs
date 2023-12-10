@@ -25,7 +25,14 @@ public class BreakableTile : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (GameManager.isGameStarted && other.gameObject.CompareTag("Player"))
+        {
+            Invoke("BreakTileSequence", breakDelay);
+        }
+    }
+    private void OnTriggerExit(Collider other)
+    {
+        if (gameObject != null && other.gameObject.CompareTag("Player"))
         {
             Invoke("BreakTileSequence", breakDelay);
         }

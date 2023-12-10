@@ -138,6 +138,50 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3179710251634048936, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
   m_PrefabInstance: {fileID: 599221269}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &87021629
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 87021631}
+  - component: {fileID: 87021630}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &87021630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87021629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4719135993928401db63b58ad89b9b30, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &87021631
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87021629}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.522651, y: 3.9630356, z: -1.869401}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &171772329 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3179710251634048936, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
@@ -195,6 +239,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 50284f755223343d58e1e2ee3da17a3b, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (5)
@@ -388,6 +436,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 523e62f6cd3334337bb40789bef5a79a, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (3)
@@ -506,6 +558,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 40a06be821ab94e87b9fad90ca5093aa, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (13)
@@ -709,6 +765,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: b7caca89278ac4696b2d5f082f4f8cb5, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (7)
@@ -818,6 +878,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 1a1ed33a9f9814a59b7020253292c374, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (8)
@@ -883,6 +947,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: fc0397effab5d4dcaa5d510ea2d1479c, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (1)
@@ -1122,6 +1190,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 6c32e786245f74d69885bd05893fd812, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (4)
@@ -1236,6 +1308,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: fc19847aad28443beaf0c221d353f0fe, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (2)
@@ -1306,6 +1382,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 90fa1b34de88d4ac983d7b6bfb2d7686, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (10)
@@ -1376,6 +1456,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: ae941b94c3d8047d8a112d60c212b14f, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (14)
@@ -1441,6 +1525,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: dae704eaedaac44abb610f18a837fa7d, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (12)
@@ -1517,6 +1605,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 7eb85775974d742ba95d685118125b27, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (15)
@@ -1587,6 +1679,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: f6f35225939cf413e9c1f0f1df07168c, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (6)
@@ -1652,6 +1748,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: c3bb8b03c00024ce0a86e9b39bb3779e, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile
@@ -1717,6 +1817,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 8a2ebf6bace2f40ad9c1228b67c82dce, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (11)
@@ -1787,6 +1891,10 @@ PrefabInstance:
       propertyPath: m_NavMeshData
       value: 
       objectReference: {fileID: 23800000, guid: 4be77f80dbf4a452c8d4b9daac1476ee, type: 2}
+    - target: {fileID: 6106060209762885032, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
+      propertyPath: breakDelay
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
       propertyPath: m_Name
       value: Tile (9)
@@ -2371,3 +2479,4 @@ SceneRoots:
   - {fileID: 626531048}
   - {fileID: 2729184787625374455}
   - {fileID: 2011717865}
+  - {fileID: 87021631}
