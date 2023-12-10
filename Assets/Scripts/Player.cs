@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
+using UnityEngine.Video;
 
 public class Player : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class Player : MonoBehaviour
     private float groundDistance;
     //ground layer should be marked here
     [SerializeField] private LayerMask groundMask;
+    [SerializeField] private bool cheatOff;
+    public static event EventHandler PlayerDied;
 
     private void Awake()
     {
@@ -80,6 +83,17 @@ public class Player : MonoBehaviour
     {
         return isWalking;
     }
+
+    public void Die()
+    {
+        if (cheatOff)
+        {
+            PlayerDied?.Invoke(this, EventArgs.Empty);
+            Debug.Log("Player died");
+        }
+            
+    }
+    
     private void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
