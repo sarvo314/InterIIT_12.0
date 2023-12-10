@@ -116,7 +116,6 @@ GameObject:
   - component: {fileID: 3179710251634048936}
   - component: {fileID: 5596639999953497806}
   - component: {fileID: 6106060209762885032}
-  - component: {fileID: 5188492614313153413}
   m_Layer: 0
   m_Name: Tile
   m_TagString: Untagged
@@ -176,34 +175,3 @@ MonoBehaviour:
   breakEffect: {fileID: 6634781631830646330, guid: c427a64c67b204c4d99a9c8e16ecc260, type: 3}
   breakSound: {fileID: 8300000, guid: d57c9165024864d18a5afbaf478cc033, type: 3}
   breakDelay: 999
---- !u!114 &5188492614313153413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8828839441861234513}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_AgentTypeID: 0
-  m_CollectObjects: 0
-  m_Size: {x: 10, y: 10, z: 10}
-  m_Center: {x: 0, y: 2, z: 0}
-  m_LayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_UseGeometry: 0
-  m_DefaultArea: 0
-  m_GenerateLinks: 0
-  m_IgnoreNavMeshAgent: 1
-  m_IgnoreNavMeshObstacle: 1
-  m_OverrideTileSize: 0
-  m_TileSize: 256
-  m_OverrideVoxelSize: 0
-  m_VoxelSize: 0.16666667
-  m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 44be24a0a7d684c65ac208b9b8e405b6, type: 2}
-  m_BuildHeightMesh: 0
