@@ -81,6 +81,7 @@ public class Player : MonoBehaviour
     // public for PlayerAnimator to access
     public bool IsWalking()
     {
+        // return playerRb.velocity != Vector3.zero; 
         return isWalking;
     }
 
