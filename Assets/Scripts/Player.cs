@@ -58,7 +58,7 @@ public class Player : MonoBehaviour
         }
 
         // For interaction
-        float moveDistance = playerSpeed * Time.deltaTime;
+        float moveDistance = playerSpeed * Time.fixedDeltaTime;
         float playerRadius = 0.9f;
         float playerHeight = 2f;
         // bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
@@ -69,43 +69,43 @@ public class Player : MonoBehaviour
 
         // }
 
-        // RaycastHit hit;
-        // bool isColliding = playerRb.SweepTest(moveDir, out hit, moveDistance * sweepDistanceMultiplier);
-        // //
-        // if (!isColliding)
-        // {
-        //     // Perform the movement if no collision is detected
-        //     playerRb.MovePosition(transform.position + moveDir * moveDistance);
-        // }
-        // else
-        // {
-        //     // If there's a collision, adjust the movement
-        //     Vector3 newMoveDir = moveDir - hit.normal * Vector3.Dot(moveDir, hit.normal);
-        //     playerRb.MovePosition(transform.position + newMoveDir * moveDistance);
-        // }
         RaycastHit hit;
-        bool isColliding = Physics.Raycast(groundCheck.transform.position + 0.2f * Vector3.up, moveDir, out hit, moveDistance);
-
+        bool isColliding = playerRb.SweepTest(moveDir, out hit, moveDistance * sweepDistanceMultiplier);
+        //
         if (!isColliding)
         {
+            // Perform the movement if no collision is detected
             playerRb.MovePosition(transform.position + moveDir * moveDistance);
         }
         else
         {
-            // Calculate the slide direction
-            Vector3 normal = hit.normal;
-            Vector3 slideDir = Vector3.ProjectOnPlane(moveDir, normal).normalized;
-
-            // Calculate the slide distance
-            float remainingDistance = moveDistance - hit.distance;
-            Vector3 adjustedMove = slideDir * remainingDistance;
-
-            playerRb.MovePosition(transform.position + adjustedMove);
+            // If there's a collision, adjust the movement
+            Vector3 newMoveDir = moveDir - hit.normal * Vector3.Dot(moveDir, hit.normal);
+            playerRb.MovePosition(transform.position + newMoveDir * moveDistance);
         }
+        // RaycastHit hit;
+        // bool isColliding = Physics.Raycast(groundCheck.transform.position + 0.2f * Vector3.up, moveDir, out hit, moveDistance);
+        //
+        // if (!isColliding)
+        // {
+        //     playerRb.MovePosition(transform.position + moveDir * moveDistance);
+        // }
+        // else
+        // {
+        //     // Calculate the slide direction
+        //     Vector3 normal = hit.normal;
+        //     Vector3 slideDir = Vector3.ProjectOnPlane(moveDir, normal).normalized;
+        //
+        //     // Calculate the slide distance
+        //     float remainingDistance = moveDistance - hit.distance;
+        //     Vector3 adjustedMove = slideDir * remainingDistance;
+        //
+        //     playerRb.MovePosition(transform.position + adjustedMove);
+        // }
 
         // Smooth rotation
         float rotateSpeed = 10f;
-        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
+        transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.fixedDeltaTime * rotateSpeed);
     }
 
     private void HandleJumping(object sender, EventArgs eventArgs)
@@ -133,7 +133,7 @@ public class Player : MonoBehaviour
         }
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
         HandleMovement();

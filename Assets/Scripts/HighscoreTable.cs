@@ -6,6 +6,35 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
+[System.Serializable]
+public class HighScoreEntry
+{
+    public int score;
+    public string name;
+
+    //public int Score
+    //{
+    //    get
+    //    {
+    //        return score;
+    //    }
+    //}
+    //public string Name
+    //{
+    //    get
+    //    {
+    //        return name;
+    //    }
+    //}
+    //public HighScoreEntry(string name, int score)
+    //{
+    //    this.score = score;
+    //    this.name = name;
+    //}
+
+
+}
+
 public class HighScoreTable : MonoBehaviour
 {
     [SerializeField]
@@ -25,7 +54,7 @@ public class HighScoreTable : MonoBehaviour
 
     private void OnEnable()
     {
-       AddHighScoreEntry(PlayerPrefs.GetInt("HIGHSCORE"), PlayerPrefs.GetString("USERNAME")); 
+       // AddHighScoreEntry(PlayerPrefs.GetInt("HIGHSCORE"), PlayerPrefs.GetString("USERNAME")); 
     }
 
     private void Awake()
@@ -43,11 +72,9 @@ public class HighScoreTable : MonoBehaviour
         Debug.Log(PlayerPrefs.GetString("highscoreTable"));
         highScoreEntryList = new List<HighScoreEntry>()
         {
-            //new HighScoreEntry{ name = "sarvo", score = 1000},
-            //new HighScoreEntry{ name = "ishan", score = 3000},
-            //new HighScoreEntry{ name = "rahul", score = 2000},
-
-
+            new HighScoreEntry{ name = "sarvo", score = 1000},
+            new HighScoreEntry{ name = "ishan", score = 3000},
+            new HighScoreEntry{ name = "rahul", score = 2000}
         };
 
 
@@ -170,42 +197,16 @@ public class HighScoreTable : MonoBehaviour
         PlayerPrefs.SetString("highscoreTable", json);
         PlayerPrefs.Save();
     }
+    // [System.Serializable]
     private class Highscores
     {
         public List<HighScoreEntry> highscoreEntryList;
     }
-    [System.Serializable]
-    public class HighScoreEntry
-    {
-        public int score;
-        public string name;
-
-        //public int Score
-        //{
-        //    get
-        //    {
-        //        return score;
-        //    }
-        //}
-        //public string Name
-        //{
-        //    get
-        //    {
-        //        return name;
-        //    }
-        //}
-        //public HighScoreEntry(string name, int score)
-        //{
-        //    this.score = score;
-        //    this.name = name;
-        //}
-
-    }
 }
 
-// using System;
 
 // using System.Collections;
+// using System;
 // using System.Collections.Generic;
 // using TMPro;
 // using Unity.VisualScripting;
@@ -220,62 +221,38 @@ public class HighScoreTable : MonoBehaviour
 //     [SerializeField] private float fieldScale;
 //     
 //     public static HighscoreTable Instance { get; private set; }
-//
-//     private void OnEnable()
-//     {
-//     }
-//
 //     private void Awake()
 //     {
-//         if (Instance == null)
+//         highScoreEntryList = new List<HighScoreEntry>
 //         {
-//             Instance = this;
-//         }
-//         else if(Instance != this)
-//         {
-//             Destroy(gameObject);
-//         }
-//         highScoreEntryList = new List<HighScoreEntry>();
-//        // AddHighScoreEntry(PlayerPrefs.GetInt("HIGHSCORE"), PlayerPrefs.GetString(GameManager.userName) ); 
+//             
+//         };
 //         entryTemplate.gameObject.SetActive(false);
+//         AddHighScoreEntry(13, "jnk");
 //         string jsonString = PlayerPrefs.GetString("highscoreTable");
 //         HighScores highScores = JsonUtility.FromJson<HighScores>(jsonString);
 //         highScoreEntryTransformList = new List<Transform>();
-//         
-//         AddHighScoreEntry(13, "sdf");
+//        
 //         //sort list by score (descending)
-//         if (jsonString == "")
-//         {
-//             HighScores highscore = new HighScores { highScoreEntryList = highScoreEntryList };
-//             string json = JsonUtility.ToJson(highscore);
-//             Debug.Log($"json is {json}");
-//             PlayerPrefs.SetString("highscoreTable", json);
-//             PlayerPrefs.Save();
-//         }
-//         for (int i = 0; i < highScores.highScoreEntryList.Count; i++)
-//         {
-//             for (int j = i + 1; j < highScores.highScoreEntryList.Count; j++)
-//             {
-//                 if (highScores.highScoreEntryList[j].score < highScores.highScoreEntryList[i].score)
-//                 {
-//                     //swap
-//                     (highScores.highScoreEntryList[i], highScores.highScoreEntryList[j]) = (highScores.highScoreEntryList[j], highScores.highScoreEntryList[i]);
-//                 }
-//             }
-//         }
-//        //reset player pref
-//        // PlayerPrefs.DeleteAll();
+//          
+//         // for (int i = 0; i < highScores.highScoreEntryList.Count; i++)
+//         // {
+//         //     for (int j = i + 1; j < highScores.highScoreEntryList.Count; j++)
+//         //     {
+//         //         if (highScores.highScoreEntryList[j].score < highScores.highScoreEntryList[i].score)
+//         //         {
+//         //             //swap
+//         //             (highScores.highScoreEntryList[i], highScores.highScoreEntryList[j]) = (highScores.highScoreEntryList[j], highScores.highScoreEntryList[i]);
+//         //         }
+//         //     }
+//         // }
 //
 //         foreach (HighScoreEntry highScoreEntry in highScores.highScoreEntryList)
 //         {
+//             
 //             CreateHighscoreEntryTransform(highScoreEntry, entryContainer, highScoreEntryTransformList);
 //         }
 //
-//         // HighScores highScores = new HighScores { highScoreEntryList = highScoreEntryList }; 
-//         // string json = JsonUtility.ToJson(highScores);
-//         // PlayerPrefs.SetString("highscoreTable", json);
-//         // PlayerPrefs.Save();
-//         // Debug.Log(PlayerPrefs.GetString("highscoreTable"));
 //     }
 //
 //     public void AddHighScoreEntry(int score, string name)
@@ -284,28 +261,12 @@ public class HighScoreTable : MonoBehaviour
 //         HighScoreEntry highScoreEntry = new HighScoreEntry {score = score, name = name};
 //         //load saved highscore
 //         string jsonString = PlayerPrefs.GetString("highscoreTable");
+//         Debug.Log(jsonString);
 //         HighScores highScores = JsonUtility.FromJson<HighScores>(jsonString);
 //
 //         
 //         //Add new entry to highscores
 //         highScores.highScoreEntryList.Add(highScoreEntry);
-//         // if (highScores == null) return;
-//         // foreach (var entry in highScores.highScoreEntryList)
-//         // {
-//         //     if (entry.name == name)
-//         //     {
-//         //         if(entry.score >= score)
-//         //         {
-//         //             return;
-//         //         }
-//         //         else
-//         //         {
-//         //             entry.score = score;
-//         //         }
-//         //
-//         //         return;
-//         //     }
-//         // }
 //         //Save updated highscores
 //         string json = JsonUtility.ToJson(highScores);
 //         Debug.Log("Succesfully added name " + name);
@@ -338,6 +299,10 @@ public class HighScoreTable : MonoBehaviour
 // public class HighScores
 // {
 //     public List<HighScoreEntry> highScoreEntryList;
+//     public HighScores()
+//     {
+//         highScoreEntryList = new List<HighScoreEntry>();
+//     }
 // }
 //
 // [System.Serializable]
