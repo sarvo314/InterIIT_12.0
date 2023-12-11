@@ -33,7 +33,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Outline: 0.0069
+    - _Outline: 0.002
     - _Shininess: 0.579717
     m_Colors:
     - _Color: {r: 0.5377358, g: 0.1922446, b: 0.012682447, a: 1}
