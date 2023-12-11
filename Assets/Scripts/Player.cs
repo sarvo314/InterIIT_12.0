@@ -12,14 +12,15 @@ public class Player : MonoBehaviour
     private Rigidbody playerRb;
     public static bool isGrounded;
     private bool isWalking;
-    [SerializeField]
-    private Transform groundCheck;
-    [SerializeField]
-    private float groundDistance;
+    [SerializeField] private Transform groundCheck;
+
+    [SerializeField] private float groundDistance;
+
     //ground layer should be marked here
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private bool cheatOff;
     [SerializeField] private bool allowOnly2DMotion;
+    [SerializeField] private float sweepDistanceMultiplier;
     public static event EventHandler PlayerDied;
 
     private void Awake()
@@ -37,17 +38,16 @@ public class Player : MonoBehaviour
     {
         return isGrounded;
     }
-    
 
-    
 
     private void HandleMovement()
     {
         Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
         if (allowOnly2DMotion)
         {
-            // inputVector.y = 0; 
+            inputVector.y = 0;
         }
+
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
         Debug.Log("move dir is " + moveDir);
         // For animation
@@ -56,17 +56,53 @@ public class Player : MonoBehaviour
         {
             GameManager.isGameStarted = true;
         }
+
         // For interaction
         float moveDistance = playerSpeed * Time.deltaTime;
         float playerRadius = 0.9f;
         float playerHeight = 2f;
         // bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
         // if (canMove)
-        {
-            // transform.position += moveDir * Time.deltaTime * playerSpeed;
-            playerRb.MovePosition(transform.position + moveDir * Time.deltaTime * playerSpeed);
+        // {
+        // transform.position += moveDir * Time.deltaTime * playerSpeed;
+        // playerRb.MovePosition(transform.position + moveDir * Time.deltaTime * playerSpeed);
 
+        // }
+
+        // RaycastHit hit;
+        // bool isColliding = playerRb.SweepTest(moveDir, out hit, moveDistance * sweepDistanceMultiplier);
+        // //
+        // if (!isColliding)
+        // {
+        //     // Perform the movement if no collision is detected
+        //     playerRb.MovePosition(transform.position + moveDir * moveDistance);
+        // }
+        // else
+        // {
+        //     // If there's a collision, adjust the movement
+        //     Vector3 newMoveDir = moveDir - hit.normal * Vector3.Dot(moveDir, hit.normal);
+        //     playerRb.MovePosition(transform.position + newMoveDir * moveDistance);
+        // }
+        RaycastHit hit;
+        bool isColliding = Physics.Raycast(groundCheck.transform.position + 0.2f * Vector3.up, moveDir, out hit, moveDistance);
+
+        if (!isColliding)
+        {
+            playerRb.MovePosition(transform.position + moveDir * moveDistance);
         }
+        else
+        {
+            // Calculate the slide direction
+            Vector3 normal = hit.normal;
+            Vector3 slideDir = Vector3.ProjectOnPlane(moveDir, normal).normalized;
+
+            // Calculate the slide distance
+            float remainingDistance = moveDistance - hit.distance;
+            Vector3 adjustedMove = slideDir * remainingDistance;
+
+            playerRb.MovePosition(transform.position + adjustedMove);
+        }
+
         // Smooth rotation
         float rotateSpeed = 10f;
         transform.forward = Vector3.Slerp(transform.forward, moveDir, Time.deltaTime * rotateSpeed);
@@ -95,13 +131,11 @@ public class Player : MonoBehaviour
             PlayerDied?.Invoke(this, EventArgs.Empty);
             Debug.Log("Player died");
         }
-            
     }
-    
+
     private void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
         HandleMovement();
     }
 }
-
