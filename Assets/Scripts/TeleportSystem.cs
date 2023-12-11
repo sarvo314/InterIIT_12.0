@@ -6,12 +6,11 @@ using UnityEngine;
 
 public class TeleportSystem : MonoBehaviour
 {
-    [SerializeField]
-    public Transform teleportTarget;
+    [SerializeField] public Transform teleportTarget;
     private bool canTeleport;
-    [SerializeField]
-    private AudioClip teleportSound;
+    [SerializeField] private AudioClip teleportSound;
     private GameObject player;
+
     private void Start()
     {
         GameInput.InteractPerformed += HandleTeleport;
@@ -19,7 +18,7 @@ public class TeleportSystem : MonoBehaviour
 
     private void HandleTeleport(object sender, EventArgs e)
     {
-        if (canTeleport && player !=null)
+        if (canTeleport && player != null)
         {
             player.transform.position = teleportTarget.position;
             canTeleport = false;
@@ -29,10 +28,18 @@ public class TeleportSystem : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (other.gameObject.CompareTag("Player") )
+        if (other.gameObject.CompareTag("Player"))
         {
             player = other.gameObject;
             canTeleport = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            canTeleport = false;
         }
     }
 }
