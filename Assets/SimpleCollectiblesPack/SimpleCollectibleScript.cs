@@ -52,8 +52,7 @@ public class SimpleCollectibleScript : MonoBehaviour {
 				//Add in code here;
 				break;
 		}
-	
-		
+
 		Destroy (gameObject);
 	}
 }
