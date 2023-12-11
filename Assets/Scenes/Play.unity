@@ -1133,11 +1133,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9370c21956746e293307f427c828db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 8828839441861234513, guid: ae7bc99c10c5f4474bff22b31f386717, type: 3}
-  numRows: 10
-  numColumns: 10
-  distanceBetweenTiles: 1
-  starPrefab: {fileID: 0}
 --- !u!1001 &819828793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1236,11 +1231,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9370c21956746e293307f427c828db, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tilePrefab: {fileID: 3710670912749704320, guid: ab34e4c350b5b634e944d18ce310ec3b, type: 3}
-  numRows: 10
-  numColumns: 10
-  distanceBetweenTiles: 1
-  starPrefab: {fileID: 1388765730846040, guid: 409010852d1134147862865a8889b834, type: 3}
 --- !u!4 &880955869
 Transform:
   m_ObjectHideFlags: 0

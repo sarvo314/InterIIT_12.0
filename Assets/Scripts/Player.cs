@@ -19,10 +19,12 @@ public class Player : MonoBehaviour
     //ground layer should be marked here
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private bool cheatOff;
+    [SerializeField] private bool allowOnly2DMotion;
     public static event EventHandler PlayerDied;
 
     private void Awake()
     {
+        // allowOnly2DMotion = true;
         playerRb = GetComponent<Rigidbody>();
     }
 
@@ -30,13 +32,6 @@ public class Player : MonoBehaviour
     {
         GameInput.JumpPerformed += HandleJumping;
     }
-
-    // To check whether on ground
-    // private void OnCollisionEnter(Collision collision)
-    // {
-    //     if(collision.gameObject.CompareTag("Ground"))
-    //         isGrounded = true;
-    // }
 
     public bool CanJump()
     {
@@ -49,9 +44,12 @@ public class Player : MonoBehaviour
     private void HandleMovement()
     {
         Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
-        inputVector.y = 0; 
+        if (allowOnly2DMotion)
+        {
+            // inputVector.y = 0; 
+        }
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-
+        Debug.Log("move dir is " + moveDir);
         // For animation
         isWalking = moveDir != Vector3.zero;
         if (moveDir != Vector3.zero)
@@ -65,7 +63,9 @@ public class Player : MonoBehaviour
         // bool canMove = !Physics.CapsuleCast(transform.position, transform.position + Vector3.up * playerHeight, playerRadius, moveDir, moveDistance);
         // if (canMove)
         {
-            transform.position += moveDir * Time.deltaTime * playerSpeed;
+            // transform.position += moveDir * Time.deltaTime * playerSpeed;
+            playerRb.MovePosition(transform.position + moveDir * Time.deltaTime * playerSpeed);
+
         }
         // Smooth rotation
         float rotateSpeed = 10f;

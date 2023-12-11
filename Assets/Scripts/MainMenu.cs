@@ -43,6 +43,12 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Instructions");
     }
 
+    public void LeaderBoard()
+    {
+        
+        SceneManager.LoadScene("Highscore");
+    }
+
     public void Quit()
     {
         #if UNITY_EDITOR
