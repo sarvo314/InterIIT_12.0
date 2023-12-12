@@ -26,10 +26,12 @@ public class Player : MonoBehaviour
     private bool onPlatform;
     [SerializeField] private float offsetAboveGround;
     public static event EventHandler PlayerDied;
-
+    public int CountStars { get; set; }
     private void Awake()
     {
+        CountStars = 0;
         // allowOnly2DMotion = true;
+
     }
 
     private void Start()
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour
         return isGrounded;
     }
 
-
+   
     private void HandleMovement()
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();
@@ -54,7 +56,7 @@ public class Player : MonoBehaviour
         }
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        Debug.Log("move dir is " + moveDir);
+        // Debug.Log("move dir is " + moveDir);
         // For animation
         isWalking = moveDir != Vector3.zero;
         if (moveDir != Vector3.zero)

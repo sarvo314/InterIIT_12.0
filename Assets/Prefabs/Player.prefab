@@ -367,6 +367,7 @@ GameObject:
   - component: {fileID: 4361691986090468390}
   - component: {fileID: 3583811580498377541}
   - component: {fileID: 554670507186140967}
+  - component: {fileID: 3570075427352227696}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -384,7 +385,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.097, z: 0}
-  m_LocalScale: {x: 1.6, y: 1.6, z: 1.6}
+  m_LocalScale: {x: 1.3, y: 1.3, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1129986262142917134}
@@ -408,7 +409,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  jumpForce: 9
+  jumpForce: 10
   groundCheck: {fileID: 5682960576930528677}
   groundDistance: 0.1
   groundMask:
@@ -478,7 +479,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.19
+  m_Radius: 0.28
   m_Height: 1.42
   m_Direction: 1
   m_Center: {x: 0, y: 0.69, z: 0}
@@ -501,6 +502,29 @@ MonoBehaviour:
   collisionChest: {fileID: 8920067027346718393}
   collisionHead: {fileID: 9192831667169524140}
   collisionLegs: {fileID: 7105851032144287056}
+--- !u!136 &3570075427352227696
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2372316332381244621}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.3104981
+  m_Height: 1.2039549
+  m_Direction: 1
+  m_Center: {x: 0.012486164, y: 0.60602695, z: -0.0049261404}
 --- !u!1 &2682610675901919643
 GameObject:
   m_ObjectHideFlags: 0
@@ -981,7 +1005,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.25, y: 0.22, z: 0.24}
+  m_Size: {x: 0.37, y: 0.37, z: 0.24}
   m_Center: {x: 0, y: 0.44, z: 0}
 --- !u!1 &7759300549514301284
 GameObject:
