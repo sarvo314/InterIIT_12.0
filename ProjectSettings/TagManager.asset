@@ -8,6 +8,9 @@ TagManager:
   - Ball
   - MovingPlatform
   - Star
+  - PortalB
+  - PortalA
+  - cubeParent
   layers:
   - Default
   - TransparentFX
