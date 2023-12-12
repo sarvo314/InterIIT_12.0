@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class Player : MonoBehaviour
@@ -25,12 +26,16 @@ public class Player : MonoBehaviour
     
     private bool onPlatform;
     [SerializeField] private float offsetAboveGround;
+    [SerializeField] private AudioClip playerDied;
+    [SerializeField] private float deathWaitTime;
     public static event EventHandler PlayerDied;
     public int CountStars { get; set; }
+    [SerializeField] private GameManager gameManager;
     private void Awake()
     {
         CountStars = 0;
         // allowOnly2DMotion = true;
+        Debug.Log("Value of is game started from player " + gameManager.isGameStarted);
 
     }
 
@@ -39,6 +44,7 @@ public class Player : MonoBehaviour
         onPlatform = false;
         gameInput.JumpPerformed += HandleJumping;
         playerRb = GetComponent<Rigidbody>();
+        gameManager.isGameStarted = false;
     }
 
     public bool CanJump()
@@ -56,12 +62,12 @@ public class Player : MonoBehaviour
         }
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        // Debug.Log("move dir is " + moveDir);
+        Debug.Log("move dir is " + moveDir);
         // For animation
         isWalking = moveDir != Vector3.zero;
         if (moveDir != Vector3.zero)
         {
-            GameManager.isGameStarted = true;
+            gameManager.isGameStarted = true;
         }
 
         // For interaction
@@ -100,7 +106,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            transform.position += moveDir * Time.deltaTime * playerSpeed;
+            transform.position += moveDir * (Time.deltaTime * playerSpeed);
         }
         // e
         // lse
@@ -137,13 +143,31 @@ public class Player : MonoBehaviour
         return isWalking;
     }
 
+    private void DeathRestartLevel()
+    {
+        StartCoroutine(DeathRestartLevelCoroutine());
+    }
+    IEnumerator DeathRestartLevelCoroutine()
+    {
+        yield return new WaitForSeconds(deathWaitTime);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("MovingPlatform"))
         {
             onPlatform = true;
         }
+        
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+      Debug.Log("collided with " + other.gameObject.name); 
+    }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -158,6 +182,8 @@ public class Player : MonoBehaviour
         if (cheatOff)
         {
             PlayerDied?.Invoke(this, EventArgs.Empty);
+            DeathRestartLevel();
+            AudioManager.Instance.PlayAudio(playerDied);
             Debug.Log("Player died");
         }
     }
