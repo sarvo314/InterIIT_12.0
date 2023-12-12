@@ -30,8 +30,8 @@ public class CubeClick : MonoBehaviour
     // Function to reset the material of the cube to default
     public void ResetMaterial()
     {
-        GetComponent<Renderer>().material = defaultMaterial; // Reset material of the cube
-    }
+        GetComponent<Renderer>().material = defaultMaterial; // Reset material of theï¿½cube
+    }
 
     private void OnMouseUpAsButton()
     {

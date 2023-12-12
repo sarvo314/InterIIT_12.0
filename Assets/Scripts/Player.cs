@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class Player : MonoBehaviour
@@ -25,6 +26,8 @@ public class Player : MonoBehaviour
     
     private bool onPlatform;
     [SerializeField] private float offsetAboveGround;
+    [SerializeField] private AudioClip playerDied;
+    [SerializeField] private float deathWaitTime;
     public static event EventHandler PlayerDied;
     public int CountStars { get; set; }
     private void Awake()
@@ -100,7 +103,7 @@ public class Player : MonoBehaviour
         }
         else
         {
-            transform.position += moveDir * Time.deltaTime * playerSpeed;
+            transform.position += moveDir * (Time.deltaTime * playerSpeed);
         }
         // e
         // lse
@@ -137,13 +140,31 @@ public class Player : MonoBehaviour
         return isWalking;
     }
 
+    private void DeathRestartLevel()
+    {
+        StartCoroutine(DeathRestartLevelCoroutine());
+    }
+    IEnumerator DeathRestartLevelCoroutine()
+    {
+        yield return new WaitForSeconds(deathWaitTime);
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.CompareTag("MovingPlatform"))
         {
             onPlatform = true;
         }
+        
     }
+
+    private void OnCollisionEnter(Collision other)
+    {
+      Debug.Log("collided with " + other.gameObject.name); 
+    }
+
 
     private void OnTriggerExit(Collider other)
     {
@@ -158,6 +179,7 @@ public class Player : MonoBehaviour
         if (cheatOff)
         {
             PlayerDied?.Invoke(this, EventArgs.Empty);
+            AudioManager.Instance.PlayAudio(playerDied);
             Debug.Log("Player died");
         }
     }

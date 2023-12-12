@@ -17,7 +17,7 @@ public class GameManager : MonoBehaviour
 
     private void OnEnable()
     {
-        Player.PlayerDied += RestartLevel; 
+        // Player.PlayerDied += RestartLevel; 
     }
 
     // Start is called before the first frame update
@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour
 
     private void OnDisable()
     {
-        Player.PlayerDied -= RestartLevel;
+        // Player.PlayerDied -= RestartLevel;
     }
 
     void Start()
