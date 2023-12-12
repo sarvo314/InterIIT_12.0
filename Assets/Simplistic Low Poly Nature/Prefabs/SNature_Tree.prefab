@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5484860840862588121
+--- !u!1 &1095773145228200
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,23 +8,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8810582416529190602}
-  - component: {fileID: 512984537673323772}
-  - component: {fileID: 6062678336516302853}
+  - component: {fileID: 4227784882853702}
+  - component: {fileID: 33709772492197068}
+  - component: {fileID: 23473483089618940}
   m_Layer: 0
-  m_Name: ForestCloud
+  m_Name: SNature_Tree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8810582416529190602
+--- !u!4 &4227784882853702
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5484860840862588121}
+  m_GameObject: {fileID: 1095773145228200}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -33,21 +33,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &512984537673323772
+--- !u!33 &33709772492197068
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5484860840862588121}
-  m_Mesh: {fileID: -7545762965820161845, guid: f47b15140d3dc6d4cafa042d753ddf65, type: 3}
---- !u!23 &6062678336516302853
+  m_GameObject: {fileID: 1095773145228200}
+  m_Mesh: {fileID: 4300000, guid: e17007e913fabaf409c5fa6cc0b3d052, type: 3}
+--- !u!23 &23473483089618940
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5484860840862588121}
+  m_GameObject: {fileID: 1095773145228200}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -61,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 69484b54d7186654f812a1d02d479e68, type: 2}
+  - {fileID: 2100000, guid: 79c2511799a05394eacdeda576d89295, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
