@@ -30,10 +30,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float deathWaitTime;
     public static event EventHandler PlayerDied;
     public int CountStars { get; set; }
+    [SerializeField] private GameManager gameManager;
     private void Awake()
     {
         CountStars = 0;
         // allowOnly2DMotion = true;
+        Debug.Log("Value of is game started from player " + gameManager.isGameStarted);
 
     }
 
@@ -42,6 +44,7 @@ public class Player : MonoBehaviour
         onPlatform = false;
         gameInput.JumpPerformed += HandleJumping;
         playerRb = GetComponent<Rigidbody>();
+        gameManager.isGameStarted = false;
     }
 
     public bool CanJump()
@@ -59,12 +62,12 @@ public class Player : MonoBehaviour
         }
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        // Debug.Log("move dir is " + moveDir);
+        Debug.Log("move dir is " + moveDir);
         // For animation
         isWalking = moveDir != Vector3.zero;
         if (moveDir != Vector3.zero)
         {
-            GameManager.isGameStarted = true;
+            gameManager.isGameStarted = true;
         }
 
         // For interaction
@@ -179,6 +182,7 @@ public class Player : MonoBehaviour
         if (cheatOff)
         {
             PlayerDied?.Invoke(this, EventArgs.Empty);
+            DeathRestartLevel();
             AudioManager.Instance.PlayAudio(playerDied);
             Debug.Log("Player died");
         }

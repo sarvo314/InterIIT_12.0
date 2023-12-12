@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d07b8f38-2c24-4253-b58f-6ff50cca7add" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" afterDir="false" />
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Play.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Play.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shlok_2.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shlok_2.unity" afterDir="false" />
@@ -13,6 +14,11 @@
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BreakableTile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BreakableTile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +131,7 @@
       <workItem from="1702144139072" duration="2424000" />
       <workItem from="1702150804225" duration="28800000" />
       <workItem from="1702312697270" duration="10919000" />
-      <workItem from="1702360767290" duration="11337000" />
+      <workItem from="1702360767290" duration="12062000" />
     </task>
     <servers />
   </component>
