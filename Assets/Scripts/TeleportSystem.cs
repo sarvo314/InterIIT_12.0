@@ -10,10 +10,11 @@ public class TeleportSystem : MonoBehaviour
     private bool canTeleport;
     [SerializeField] private AudioClip teleportSound;
     private GameObject player;
+    [SerializeField] private GameInput gameInput;
 
     private void Start()
     {
-        GameInput.InteractPerformed += HandleTeleport;
+        gameInput.InteractPerformed += HandleTeleport;
     }
 
     private void HandleTeleport(object sender, EventArgs e)
@@ -41,5 +42,10 @@ public class TeleportSystem : MonoBehaviour
         {
             canTeleport = false;
         }
+    }
+
+    private void OnDisable()
+    {
+       gameInput.InteractPerformed -= HandleTeleport; 
     }
 }

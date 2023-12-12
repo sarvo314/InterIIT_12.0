@@ -9,8 +9,8 @@ public class GameInput : MonoBehaviour
 {
     private PlayerInputActions playerMovement;
     public static GameInput Instance;
-    public static event EventHandler JumpPerformed;
-    public static event EventHandler InteractPerformed;
+    public event EventHandler JumpPerformed;
+    public event EventHandler InteractPerformed;
 
 
     // Start is called before the first frame update
@@ -26,7 +26,7 @@ public class GameInput : MonoBehaviour
         }
         else if (Instance != this)
         {
-            Destroy(this.gameObject);
+            // Destroy(this.gameObject);
         }
     }
 
@@ -47,6 +47,14 @@ public class GameInput : MonoBehaviour
         inputVector = inputVector.normalized;
         return inputVector;
     }
+
+    private void OnDisable()
+    { 
+        Instance = null;
+       playerMovement.Player.Jump.performed -= Jump_performed;
+       playerMovement.Player.Interact.performed -= Interact_performed;
+    }
+
     // Update is called once per frame
     void Update()
     {

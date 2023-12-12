@@ -6,15 +6,20 @@
   <component name="ChangeListManager">
     <list default="true" id="d07b8f38-2c24-4253-b58f-6ff50cca7add" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LevelComplete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelComplete.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Goal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Goal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Ritesh_Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Ritesh_Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Highscore.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Highscore.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu/Highscore.unity.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu/Highscore.unity.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HighscoreTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HighscoreTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level_run.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level_run.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shivang.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shivang.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeleportSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeleportSystem.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,8 +41,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/HighscoreTable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MovingPlatform.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Recursive.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/RepositionPlayer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/SpikeBomb.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UPattern/Code/TubeAgentGizmo.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.7.0/InputSystem/Utilities/DelegateHelpers.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.splines@2.4.0/Runtime/SplineInstantiate.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo">{
@@ -49,27 +56,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "CodeLensConfigurable",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;/Users/archon/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache&quot;,
-      &quot;/Users/archon/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache&quot;,
-      &quot;/Users/archon/.local/share/Symbols/src&quot;
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "/Users/archon/Library/Application Support/JetBrains/Rider2023.2/resharper-host/DecompilerCache",
+      "/Users/archon/Library/Application Support/JetBrains/Rider2023.2/resharper-host/SourcesCache",
+      "/Users/archon/.local/share/Symbols/src"
     ]
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.10f1/Unity.app/Contents/MacOS/Unity" />
@@ -122,7 +129,8 @@
       <workItem from="1702139160432" duration="2722000" />
       <workItem from="1702144139072" duration="2424000" />
       <workItem from="1702150804225" duration="28800000" />
-      <workItem from="1702312697270" duration="10321000" />
+      <workItem from="1702312697270" duration="10919000" />
+      <workItem from="1702360767290" duration="7350000" />
     </task>
     <servers />
   </component>

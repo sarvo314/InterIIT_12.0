@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI nameField;
 
+    private void OnEnable()
+    {
+        Player.PlayerDied += RestartLevel; 
+    }
+
     // Start is called before the first frame update
     private void Awake()
     {
@@ -44,6 +49,15 @@ public class GameManager : MonoBehaviour
         PlayerPrefs.SetString(USERNAME, userName);
         PlayerPrefs.Save();
         Debug.Log("Name is " + userName);
+    }
+    private void RestartLevel(object sender, EventArgs eventArgs)
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+    }
+
+    private void OnDisable()
+    {
+        Player.PlayerDied -= RestartLevel;
     }
 
     void Start()

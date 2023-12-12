@@ -21,17 +21,22 @@ public class Player : MonoBehaviour
     [SerializeField] private bool cheatOff;
     [SerializeField] private bool allowOnly2DMotion;
     [SerializeField] private float sweepDistanceMultiplier;
+    [SerializeField] private GameInput gameInput;
+    
+    private bool onPlatform;
+    [SerializeField] private float offsetAboveGround;
     public static event EventHandler PlayerDied;
 
     private void Awake()
     {
         // allowOnly2DMotion = true;
-        playerRb = GetComponent<Rigidbody>();
     }
 
     private void Start()
     {
-        GameInput.JumpPerformed += HandleJumping;
+        onPlatform = false;
+        gameInput.JumpPerformed += HandleJumping;
+        playerRb = GetComponent<Rigidbody>();
     }
 
     public bool CanJump()
@@ -42,7 +47,7 @@ public class Player : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector2 inputVector = GameInput.Instance.GetMovementVectorNormalized();
+        Vector2 inputVector = gameInput.GetMovementVectorNormalized();
         if (allowOnly2DMotion)
         {
             inputVector.y = 0;
@@ -69,39 +74,45 @@ public class Player : MonoBehaviour
 
         // }
 
-        RaycastHit hit;
-        bool isColliding = playerRb.SweepTest(moveDir, out hit, moveDistance * sweepDistanceMultiplier);
+        // bool isColliding = playerRb.SweepTest(moveDir, out hit, moveDistance * sweepDistanceMultiplier);
         //
-        if (!isColliding)
+        // if (!isColliding)
         {
             // Perform the movement if no collision is detected
+            // playerRb.MovePosition(transform.position + moveDir * moveDistance);
+        }
+        // else
+        {
+            // If there's a collision, adjust the movement
+            // Vector3 newMoveDir = moveDir - hit.normal * Vector3.Dot(moveDir, hit.normal);
+            // playerRb.MovePosition(transform.position + newMoveDir * moveDistance);
+        }
+        // RaycastHit hit;
+        // bool isColliding = Physics.Raycast(groundCheck.transform.position + 0.2f * Vector3.up, moveDir, out hit,
+            // moveDistance);
+
+        // if (!isColliding)
+        if(!onPlatform)
+        {
             playerRb.MovePosition(transform.position + moveDir * moveDistance);
         }
         else
         {
-            // If there's a collision, adjust the movement
-            Vector3 newMoveDir = moveDir - hit.normal * Vector3.Dot(moveDir, hit.normal);
-            playerRb.MovePosition(transform.position + newMoveDir * moveDistance);
+            transform.position += moveDir * Time.deltaTime * playerSpeed;
         }
-        // RaycastHit hit;
-        // bool isColliding = Physics.Raycast(groundCheck.transform.position + 0.2f * Vector3.up, moveDir, out hit, moveDistance);
-        //
-        // if (!isColliding)
-        // {
-        //     playerRb.MovePosition(transform.position + moveDir * moveDistance);
-        // }
-        // else
-        // {
-        //     // Calculate the slide direction
-        //     Vector3 normal = hit.normal;
-        //     Vector3 slideDir = Vector3.ProjectOnPlane(moveDir, normal).normalized;
-        //
-        //     // Calculate the slide distance
-        //     float remainingDistance = moveDistance - hit.distance;
-        //     Vector3 adjustedMove = slideDir * remainingDistance;
-        //
-        //     playerRb.MovePosition(transform.position + adjustedMove);
-        // }
+        // e
+        // lse
+        {
+            // Calculate the slide direction
+            // Vector3 normal = hit.normal;
+            // Vector3 slideDir = Vector3.ProjectOnPlane(moveDir, normal).normalized;
+
+            // Calculate the slide distance
+            // float remainingDistance = moveDistance - hit.distance;
+            // Vector3 adjustedMove = slideDir * remainingDistance;
+
+            // playerRb.MovePosition(transform.position + adjustedMove);
+        }
 
         // Smooth rotation
         float rotateSpeed = 10f;
@@ -124,6 +135,22 @@ public class Player : MonoBehaviour
         return isWalking;
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("MovingPlatform"))
+        {
+            onPlatform = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("MovingPlatform"))
+        {
+            onPlatform = false;
+        }
+    }
+
     public void Die()
     {
         if (cheatOff)
@@ -132,7 +159,18 @@ public class Player : MonoBehaviour
             Debug.Log("Player died");
         }
     }
-
+    // private void OnCollisionStay(Collision collision)
+    // {
+    //     // Check if the collision is with the ground
+    //     if (collision.gameObject.tag == "Ground")
+    //     {
+    //         // Calculate the position where the player should be placed above the ground
+    //         Vector3 newPosition = collision.contacts[0].point + (collision.contacts[0].normal * offsetAboveGround);
+    //         
+    //         // Set the player's position above the ground
+    //         transform.position = newPosition;
+    //     }
+    // }
     private void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
