@@ -29,34 +29,34 @@ public class BreakableTile : MonoBehaviour
         gameManager = FindObjectOfType<GameManager>();
     }
 
-    // private void OnTriggerEnter(Collider other)
-    // {
-    //     if (gameManager.isGameStarted && other.gameObject.CompareTag("Player"))
-    //         
-    //     {
-    //         Debug.Log("Player entered we break tile now");
-    //         Invoke("BreakTileSequence", breakDelay);
-    //     }
-    // }
-    // private void OnTriggerExit(Collider other)
-    // {
-    //     if (gameManager.isGameStarted && gameObject != null && other.gameObject.CompareTag("Player"))
-    //     {
-    //         Debug.Log("Player exited we break tile now");
-    //         Invoke("BreakTileSequence", breakDelay);
-    //     }
-    // }
-
-    private void OnTriggerStay(Collider other)
+    private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("game is started");
         if (gameManager.isGameStarted && other.gameObject.CompareTag("Player"))
-
+            
         {
             Debug.Log("Player entered we break tile now");
             Invoke("BreakTileSequence", breakDelay);
         }
     }
+    private void OnTriggerExit(Collider other)
+    {
+        if (gameManager.isGameStarted && gameObject != null && other.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player exited we break tile now");
+            Invoke("BreakTileSequence", breakDelay);
+        }
+    }
+
+    // private void OnTriggerStay(Collider other)
+    // {
+    //     Debug.Log("game is started");
+    //     if (gameManager.isGameStarted && other.gameObject.CompareTag("Player"))
+    //
+    //     {
+    //         Debug.Log("Player entered we break tile now");
+    //         Invoke("BreakTileSequence", breakDelay);
+    //     }
+    // }
 
     private void PlayBreakSound(object sender, EventArgs eventArgs)
     {
