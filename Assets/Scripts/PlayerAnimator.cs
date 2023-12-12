@@ -11,9 +11,10 @@ public class PlayerAnimator : MonoBehaviour
 
     private const string IS_WALKING = "isRunning";
     private const string JUMP = "Jump";
-    private void Start()
+    [SerializeField] private GameInput gameInput;
+    private void OnEnable()
     {
-        GameInput.JumpPerformed += Jumped;
+        gameInput.JumpPerformed += Jumped;
         animator = GetComponent<Animator>();
     }
 
@@ -29,5 +30,10 @@ public class PlayerAnimator : MonoBehaviour
     private void Update()
     { 
         animator.SetBool(IS_WALKING, player.IsWalking());
+    }
+
+    private void OnDisable()
+    {
+       gameInput.JumpPerformed -= Jumped; 
     }
 }
