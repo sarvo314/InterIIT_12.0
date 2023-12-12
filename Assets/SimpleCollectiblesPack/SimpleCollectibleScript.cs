@@ -17,6 +17,10 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	public GameObject collectEffect;
 
+	private Player player;
+	private bool canTrigger = true;
+	private float debounceTime = 0.5f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -32,11 +36,19 @@ public class SimpleCollectibleScript : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other)
 	{
-		if (other.tag == "Player") {
+		if (canTrigger && other.tag == "Player")
+		{
 			Collect ();
+			
+			canTrigger = false;
+			StartCoroutine(ResetTrigger());
+			
 		}
 	}
-
+	IEnumerator ResetTrigger() {
+		yield return new WaitForSeconds(debounceTime);
+		canTrigger = true;
+	}
 	public void Collect()
 	{
 		if (collectSound)
@@ -49,6 +61,11 @@ public class SimpleCollectibleScript : MonoBehaviour {
 		switch (CollectibleType)
 		{
 			case CollectibleTypes.Star:
+			{
+				player = FindObjectOfType<Player>();
+				player.CountStars++;
+				Debug.Log("Incremented CountStars");
+			}
 				//Add in code here;
 				break;
 		}

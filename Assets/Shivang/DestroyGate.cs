@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
@@ -9,16 +10,10 @@ public class DestroyGate : MonoBehaviour
     [SerializeField] GameObject door;
     private int countStars;
     // Start is called before the first frame update
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Star")
-        {
-            countStars += 1;
-        }
-    }
+    [SerializeField] private Player player;
     private void Update()
     {
-        if (countStars == 8)
+        if (player.CountStars == 8)
         {
             Destroy(door);
         }
