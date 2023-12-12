@@ -16,7 +16,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform groundCheck;
 
     [SerializeField] private float groundDistance;
-
+    [SerializeField] 
+    private Animator transitionAnim;
     //ground layer should be marked here
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private bool cheatOff;
@@ -30,9 +31,12 @@ public class Player : MonoBehaviour
     [SerializeField] private float deathWaitTime;
     public static event EventHandler PlayerDied;
     public int CountStars { get; set; }
+    
+    public bool IsDead { get; set; }
     [SerializeField] private GameManager gameManager;
     private void Awake()
     {
+        IsDead = false;
         CountStars = 0;
         // allowOnly2DMotion = true;
         Debug.Log("Value of is game started from player " + gameManager.isGameStarted);
@@ -129,7 +133,7 @@ public class Player : MonoBehaviour
 
     private void HandleJumping(object sender, EventArgs eventArgs)
     {
-        if (isGrounded)
+        if (isGrounded && IsDead == false)
         {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -150,8 +154,15 @@ public class Player : MonoBehaviour
     IEnumerator DeathRestartLevelCoroutine()
     {
         yield return new WaitForSeconds(deathWaitTime);
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name);
+        string sceneName = UnityEngine.SceneManagement.SceneManager.GetActiveScene().name;
+        StartCoroutine(LoadScene(sceneName));
         
+    }
+    IEnumerator LoadScene(string sceneName)
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(sceneName);
     }
     
     private void OnTriggerEnter(Collider other)
@@ -179,8 +190,9 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        if (cheatOff)
+        if (cheatOff && !IsDead)
         {
+            IsDead = true;
             PlayerDied?.Invoke(this, EventArgs.Empty);
             DeathRestartLevel();
             AudioManager.Instance.PlayAudio(playerDied);
@@ -202,6 +214,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
-        HandleMovement();
+        if(!IsDead)
+            HandleMovement();
     }
 }

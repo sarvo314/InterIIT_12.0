@@ -23,7 +23,7 @@ public class PlayerAnimator : MonoBehaviour
     private void Jumped(object sender, EventArgs eventArgs)
     {
         // if()
-        if (Player.isGrounded)
+        if (Player.isGrounded && player.IsDead == false)
         {
             animator.SetTrigger(JUMP);
         }
@@ -34,7 +34,8 @@ public class PlayerAnimator : MonoBehaviour
     }
     private void Update()
     { 
-        animator.SetBool(IS_WALKING, player.IsWalking());
+        if(player.IsDead == false)
+            animator.SetBool(IS_WALKING, player.IsWalking());
     }
 
     private void OnDisable()
