@@ -7,7 +7,7 @@ using UnityEngine.Video;
 
 public class GameInput : MonoBehaviour
 {
-    [SerializeField] private PlayerInputActions playerMovement;
+    private PlayerInputActions playerMovement;
     public static GameInput Instance;
     public event EventHandler JumpPerformed;
     public event EventHandler InteractPerformed;
