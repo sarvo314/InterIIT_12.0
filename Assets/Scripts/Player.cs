@@ -26,10 +26,12 @@ public class Player : MonoBehaviour
     private bool onPlatform;
     [SerializeField] private float offsetAboveGround;
     public static event EventHandler PlayerDied;
-
+    public int CountStars { get; set; }
     private void Awake()
     {
+        CountStars = 0;
         // allowOnly2DMotion = true;
+
     }
 
     private void Start()
@@ -44,7 +46,7 @@ public class Player : MonoBehaviour
         return isGrounded;
     }
 
-
+   
     private void HandleMovement()
     {
         Vector2 inputVector = gameInput.GetMovementVectorNormalized();

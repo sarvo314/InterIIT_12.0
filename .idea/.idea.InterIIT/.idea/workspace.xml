@@ -6,20 +6,14 @@
   <component name="ChangeListManager">
     <list default="true" id="d07b8f38-2c24-4253-b58f-6ff50cca7add" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.InterIIT/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/LevelComplete.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LevelComplete.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Goal.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Goal.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Maze_level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Maze_level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Ritesh_Level_1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Ritesh_Level_1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level_run.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Levels/Sarvo_Level_run.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Shivang.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Shivang.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameInput.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameManager.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/BallMover.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/BallMover.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerAnimator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/TeleportSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/TeleportSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Shivang/DestroyGate.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Shivang/DestroyGate.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/SimpleCollectiblesPack/SimpleCollectibleScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SimpleCollectiblesPack/SimpleCollectibleScript.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,7 +124,7 @@
       <workItem from="1702144139072" duration="2424000" />
       <workItem from="1702150804225" duration="28800000" />
       <workItem from="1702312697270" duration="10919000" />
-      <workItem from="1702360767290" duration="7350000" />
+      <workItem from="1702360767290" duration="11337000" />
     </task>
     <servers />
   </component>
