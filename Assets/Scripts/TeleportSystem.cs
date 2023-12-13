@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class TeleportSystem : MonoBehaviour
 {
+    public static bool nearPortal = false;
     [SerializeField] public Transform teleportTarget;
     private bool canTeleport;
     [SerializeField] private AudioClip teleportSound;
@@ -32,6 +33,7 @@ public class TeleportSystem : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             player = other.gameObject;
+            nearPortal = true;
             canTeleport = true;
         }
     }
@@ -40,6 +42,7 @@ public class TeleportSystem : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            nearPortal = false;
             canTeleport = false;
         }
     }
