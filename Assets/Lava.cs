@@ -1,3 +1,4 @@
+using MimicSpace;
 using System;
 using UnityEngine;
 
@@ -45,6 +46,12 @@ public class Lava : MonoBehaviour
         {
             other.gameObject.GetComponent<Player>().Die();
             
+        }
+
+        else if(other.gameObject.TryGetComponent<Mimic>(out Mimic mimic))
+        {
+            Debug.Log("Gottem");
+            mimic.Death();
         }
     }
 }

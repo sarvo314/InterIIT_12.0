@@ -7,9 +7,12 @@ using UnityEngine;
 public class BreakableTile : MonoBehaviour
 {
     public event EventHandler OnTileBreak;
-    [SerializeField] private ParticleSystem breakEffect;
-    [SerializeField] private AudioClip breakSound;
-    [SerializeField] private float breakDelay = 0.5f;
+    [SerializeField]
+    private ParticleSystem breakEffect;
+    [SerializeField]
+    private AudioClip breakSound;
+    [SerializeField]
+    public float breakDelay = 0.5f;
 
     private GameManager gameManager;
 
@@ -18,8 +21,7 @@ public class BreakableTile : MonoBehaviour
         OnTileBreak += PlayBreakSound;
         OnTileBreak += BreakTileEffect;
     }
-
-    private void BreakTileSequence()
+    public void BreakTileSequence()
     {
         OnTileBreak?.Invoke(this, EventArgs.Empty);
     }
@@ -57,6 +59,17 @@ public class BreakableTile : MonoBehaviour
     //         Invoke("BreakTileSequence", breakDelay);
     //     }
     // }
+
+    private void OnTriggerStay(Collider other)
+    {
+        // Debug.Log("game is started");
+        if (gameManager.isGameStarted && other.gameObject.CompareTag("Player"))
+
+        {
+            // Debug.Log("Player entered we break tile now");
+            Invoke("BreakTileSequence", breakDelay);
+        }
+    }
 
     private void PlayBreakSound(object sender, EventArgs eventArgs)
     {
