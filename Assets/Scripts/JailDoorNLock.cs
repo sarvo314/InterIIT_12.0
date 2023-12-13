@@ -25,6 +25,7 @@ public class JailDoorNLock : MonoBehaviour
             if (!Mimic.activeSelf)
             {
                 Lock.SetActive(true);
+                gameInput.InteractPerformed -= StartMinigame;
             }
             else
             {

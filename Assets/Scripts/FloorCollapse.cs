@@ -8,7 +8,9 @@ public class FloorCollapse : MonoBehaviour
     [SerializeField] private GameObject navMeshLinks;
     [SerializeField] private GameObject mimic;
     [SerializeField] private BreakableTile[] floorTiles;
-    private float delay = 11;
+    [SerializeField] private GameObject NMLfloorRight;
+    [SerializeField] private GameObject NMLfloorLeft;
+    private float delay = 15;
     private float difference = 0.1f;
     // Start is called before the first frame update
     void Start()
@@ -29,7 +31,7 @@ public class FloorCollapse : MonoBehaviour
     {
         navMeshLinks.SetActive(false);
     }
-    // Update is called once per frame
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
@@ -44,6 +46,8 @@ public class FloorCollapse : MonoBehaviour
         {
             tile.breakDelay = delay;
             yield return new WaitForSeconds(tile.breakDelay);
+            NMLfloorLeft.SetActive(false);
+            NMLfloorRight.SetActive(false);
             BreakTile(tile);
             delay = difference;
         }

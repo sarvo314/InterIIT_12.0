@@ -15,13 +15,11 @@ public class CubeClick : MonoBehaviour
         Renderer renderer = GetComponent<Renderer>();
         if (renderer.sharedMaterial == defaultMaterial)
         {
-            Debug.Log("Default found");
             GetComponent<Renderer>().material = clickedMaterial; // Change material of the clicked cube
             isLit = true;
         }
         else
         {
-            Debug.Log("Lit found");
             GetComponent<Renderer>().material = defaultMaterial;
             isLit = false;
         }

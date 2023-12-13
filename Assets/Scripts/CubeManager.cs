@@ -5,7 +5,8 @@ using UnityEngine;
 public class CubeManager : MonoBehaviour
 {
     [SerializeField] private CubeClick[] cubes; // Array to hold all the cube objects
-
+    [SerializeField] private GameObject jailDoor;
+    [SerializeField] private AudioClip openSound;
 
     // Function to handle click on a cube
     public void OnCubeClicked(CubeClick clickedCube)
@@ -35,7 +36,13 @@ public class CubeManager : MonoBehaviour
         if (rightIndex >= 0 && rightIndex < cubes.Length && rightIndex / 3 == index / 3)
             cubes[rightIndex].ChangeMaterial();
 
-        Debug.Log(Win());
+        // If won, gg
+        if (Win())
+        {
+            jailDoor.SetActive(false);
+            AudioManager.Instance.PlayAudio(openSound);
+            this.gameObject.SetActive(false);
+        }
     }
 
     /*
