@@ -47,7 +47,7 @@ public class MainMenu : MonoBehaviour
     public void LevelSelect(int level)
     {
         // SceneManager.LoadScene(level.ToString());
-        StartCoroutine(LoadScene(level.ToString()));
+        StartCoroutine(LoadScene("Level_" + level.ToString()));
     }
     public void DisplayLeaderboard()
     {

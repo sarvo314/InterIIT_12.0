@@ -11,9 +11,10 @@ public class DestroyGate : MonoBehaviour
     private int countStars;
     // Start is called before the first frame update
     [SerializeField] private Player player;
+    [SerializeField] private int numStars;
     private void Update()
     {
-        if (player.CountStars == 8)
+        if (player.CountStars == numStars)
         {
             Destroy(door);
         }

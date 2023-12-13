@@ -13,12 +13,12 @@ public class AudioManager : MonoBehaviour
         if(Instance == null)
         {
             Instance = this;
+            DontDestroyOnLoad(this.gameObject);
         }
         else if(Instance != this)
         {
             Destroy(this.gameObject);
         }
-        DontDestroyOnLoad(this.gameObject);
     }
 
     public void PlayAudio(AudioClip audioClip)
@@ -31,9 +31,20 @@ public class AudioManager : MonoBehaviour
         }
         effectsSource.PlayOneShot(audioClip);
     }
-    // Update is called once per frame
-    void Update()
+
+    public void ChangeMasterVolume(float value)
     {
-        
+        AudioListener.volume = value;
     }
+
+    public void ToggleEffects()
+    {
+        effectsSource.mute = !effectsSource.mute;
+    }
+
+    public void ToggleMusic()
+    {
+        musicSource.mute = !musicSource.mute;
+    }
+    
 }
