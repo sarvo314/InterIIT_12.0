@@ -11,6 +11,8 @@ TagManager:
   - PortalB
   - PortalA
   - cubeParent
+  - SpikeTiles
+  - mimicCapsule
   layers:
   - Default
   - TransparentFX

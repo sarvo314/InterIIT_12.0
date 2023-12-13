@@ -537,7 +537,7 @@ GameObject:
   - component: {fileID: 8867828274068208328}
   m_Layer: 0
   m_Name: DeathTile
-  m_TagString: Untagged
+  m_TagString: SpikeTiles
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -579,12 +579,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1.6282158, y: 0.36061668, z: 1.6584551}
-  m_Center: {x: -0.047100067, y: 0.012274742, z: -0.023165464}
+  m_Size: {x: 1.6282158, y: 0.86828995, z: 1.6584551}
+  m_Center: {x: -0.047100067, y: 0.26611137, z: -0.023165464}
 --- !u!1 &6593475669328996113
 GameObject:
   m_ObjectHideFlags: 0
