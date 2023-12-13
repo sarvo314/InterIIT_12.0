@@ -18,8 +18,11 @@ MonoBehaviour:
     value: 1
   intensity:
     overrideState: 1
+<<<<<<< Updated upstream
     value: 0.38
+=======
     value: 5.69
+>>>>>>> Stashed changes
   threshold:
     overrideState: 1
     value: 1
