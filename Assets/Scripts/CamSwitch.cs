@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CamSwitch : MonoBehaviour
 {
-    [SerializeField] GameObject mainView;
-    [SerializeField] GameObject backView;
+    [SerializeField] private GameObject mainView;
+    [SerializeField] private GameObject backView;
 
     private bool isMainVisible = false;
     void Update()

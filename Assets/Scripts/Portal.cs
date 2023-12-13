@@ -7,6 +7,7 @@ public class Portal : MonoBehaviour
 {
     private Transform destination;
     [SerializeField] private float distance = 0.5f;
+    [SerializeField] private AudioClip teleportSound;
     
     void Start()
     {
@@ -20,6 +21,7 @@ public class Portal : MonoBehaviour
             rb.velocity = Vector3.zero;
             other.transform.position = new Vector3(destination.position.x , destination.position.y , destination.position.z);
             rb.velocity = velocity;
+            AudioManager.Instance.PlayAudio(teleportSound);
         }
     }
 }
