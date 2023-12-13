@@ -6,10 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    private string menu = "MainMenu";
+    private const string MAIN_MENU = "MainMenu";
     public static bool isPaused = false;
     [SerializeField] private GameObject PauseUI;
     [SerializeField] private GameObject PauseButton;
+    [SerializeField] private Animator transitionAnim;
 
     void Update()
     {
@@ -38,10 +39,22 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void MainMenu(){
-        SceneManager.LoadScene(menu);
+        // SceneManager.LoadScene(menu);
+        StartCoroutine(LoadScene(MAIN_MENU));
     }
     
     public void Quit(){
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
         Application.Quit();
+#endif
+    }
+    IEnumerator LoadScene(string sceneName)
+    {
+        transitionAnim.SetTrigger("End");
+        yield return new WaitForSecondsRealtime(1.5f);
+        Time.timeScale = 1;
+        SceneManager.LoadScene(sceneName);
     }
 }

@@ -15,7 +15,6 @@ public class MainMenu : MonoBehaviour
     
     private const string MAIN_MENU = "MainMenu";
     private const string LEVEL_SELECT = "LevelSelect";
-    private const string LEADERBOARD = "Leaderboard";
     private const string INSTRUCTIONS = "Instructions";
     private const string OPTIONS = "Options";
     private const string HIGHSCORE = "Highscore";
@@ -54,7 +53,7 @@ public class MainMenu : MonoBehaviour
     {
         Debug.Log("we go to leaderboard");
         // SceneManager.LoadScene("Leaderboard");
-        StartCoroutine(LoadScene(LEADERBOARD));
+        StartCoroutine(LoadScene(HIGHSCORE));
     }
     
     public void DisplayInstructions()
@@ -68,7 +67,7 @@ public class MainMenu : MonoBehaviour
     {
         
         // SceneManager.LoadScene("Highscore");
-        StartCoroutine(LoadScene(LEADERBOARD));
+        StartCoroutine(LoadScene(HIGHSCORE));
     }
     
 

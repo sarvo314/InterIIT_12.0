@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.21053939, g: 0.55205965, b: 0.55733943, a: 1}
+  m_IndirectSpecularColor: {r: 0.21053949, g: 0.5520596, b: 0.55733943, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -93641,6 +93641,10 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 8357590758991351892}
+    - target: {fileID: 3054613306315288604, guid: e3231c6ad4bd9460f8a1304ea20aa497, type: 3}
+      propertyPath: allowPlayerToInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4578103437393180439, guid: e3231c6ad4bd9460f8a1304ea20aa497, type: 3}
       propertyPath: m_Name
       value: TeleportB
@@ -93709,6 +93713,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8677292375823816950, guid: cb15a2af745c6ab4d95af0cee0c150c1, type: 3}
+      propertyPath: transitionAnim
+      value: 
+      objectReference: {fileID: 1757837945}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -93803,6 +93811,10 @@ PrefabInstance:
       propertyPath: teleportTarget
       value: 
       objectReference: {fileID: 8357590758919386165}
+    - target: {fileID: 1040327806568255798, guid: 4dbcbc2c4384a41a3a7a0fbe6cf73aa5, type: 3}
+      propertyPath: allowPlayerToInteract
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6475472538954261936, guid: 4dbcbc2c4384a41a3a7a0fbe6cf73aa5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.94

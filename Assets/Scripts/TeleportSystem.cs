@@ -11,7 +11,7 @@ public class TeleportSystem : MonoBehaviour
     [SerializeField] private AudioClip teleportSound;
     private GameObject player;
     [SerializeField] private GameInput gameInput;
-
+    [SerializeField] private bool allowPlayerToInteract = true;
     private void Start()
     {
         gameInput.InteractPerformed += HandleTeleport;
@@ -19,7 +19,7 @@ public class TeleportSystem : MonoBehaviour
 
     private void HandleTeleport(object sender, EventArgs e)
     {
-        if (canTeleport && player != null)
+        if (canTeleport && player != null && allowPlayerToInteract)
         {
             player.transform.position = teleportTarget.position;
             canTeleport = false;
