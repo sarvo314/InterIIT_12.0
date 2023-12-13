@@ -6,6 +6,8 @@ namespace MimicSpace
 {
     public class Mimic : MonoBehaviour
     {
+        [SerializeField] private AudioClip mimicDeath;
+
         [Header("Animation")]
         public GameObject legPrefab;
 
@@ -162,6 +164,13 @@ namespace MimicSpace
         {
             availableLegPool.Add(leg);
             leg.SetActive(false);
+        }
+
+        public void Death()
+        {
+            AudioManager.Instance.PlayAudio(mimicDeath);
+            Debug.Log("Mimic is die");
+            this.gameObject.SetActive(false);
         }
     }
 

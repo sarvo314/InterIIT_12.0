@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        Debug.Log("Value of is game started " + isGameStarted);
+        // Debug.Log("Value of is game started " + isGameStarted);
         // if (Instance == null)
         // {
         //     Instance = this;

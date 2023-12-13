@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
         IsDead = false;
         CountStars = 0;
         // allowOnly2DMotion = true;
-        Debug.Log("Value of is game started from player " + gameManager.isGameStarted);
+        // Debug.Log("Value of is game started from player " + gameManager.isGameStarted);
 
     }
 
@@ -66,7 +66,7 @@ public class Player : MonoBehaviour
         }
 
         Vector3 moveDir = new Vector3(inputVector.x, 0f, inputVector.y);
-        Debug.Log("move dir is " + moveDir);
+        // Debug.Log("move dir is " + moveDir);
         // For animation
         isWalking = moveDir != Vector3.zero;
         AudioManager.Instance.Footsteps(isWalking);
@@ -178,7 +178,7 @@ public class Player : MonoBehaviour
 
     private void OnCollisionEnter(Collision other)
     {
-      Debug.Log("collided with " + other.gameObject.name); 
+      // Debug.Log("collided with " + other.gameObject.name); 
     }
 
 

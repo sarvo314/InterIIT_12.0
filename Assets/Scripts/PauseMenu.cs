@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,7 +6,9 @@ public class PauseMenu : MonoBehaviour
 {
     private const string MAIN_MENU = "MainMenu";
     public static bool isPaused = false;
+    public static bool isShownHint = false;
     [SerializeField] private GameObject PauseUI;
+    [SerializeField] private GameObject HintUI;
     [SerializeField] private GameObject PauseButton;
     [SerializeField] private Animator transitionAnim;
 
@@ -25,13 +25,20 @@ public class PauseMenu : MonoBehaviour
             }
         }
     }
+    public void Hint(){
+        HintUI.SetActive(!isShownHint);
+        isShownHint = !isShownHint;
+        
+    }
     public void Resume(){
+        HintUI.SetActive(isShownHint);
         PauseUI.SetActive(false);
         PauseButton.SetActive(true);
         Time.timeScale = 1f;
         isPaused = false;
     }
     public void Pause(){
+        HintUI.SetActive(false);
         PauseUI.SetActive(true);
         PauseButton.SetActive(false);
         Time.timeScale = 0f;
