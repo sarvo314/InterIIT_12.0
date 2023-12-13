@@ -16431,8 +16431,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9310466453bfd4fbd9d551da4deb5d45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicSource: {fileID: 228972473}
-  effectsSource: {fileID: 547275966}
+  musicSource: {fileID: 0}
+  effectsSource: {fileID: 0}
+  footstepsSource: {fileID: 0}
 --- !u!4 &385779693
 Transform:
   m_ObjectHideFlags: 0
@@ -16445,9 +16446,7 @@ Transform:
   m_LocalPosition: {x: 0.82480335, y: 0.56419134, z: -0.11793316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 547275967}
-  - {fileID: 228972474}
+  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &387223510
@@ -49439,6 +49438,14 @@ PrefabInstance:
       propertyPath: InitialModule.startSize.scalar
       value: 1.4
       objectReference: {fileID: 0}
+    - target: {fileID: 5283653044785357857, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
+      propertyPath: nextLevel
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283653044785357857, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
+      propertyPath: transitionAnim
+      value: 
+      objectReference: {fileID: 1757837945}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -96299,3 +96306,4 @@ SceneRoots:
   - {fileID: 13752624}
   - {fileID: 3118748645345778860}
   - {fileID: 380791875}
+  - {fileID: 385779693}

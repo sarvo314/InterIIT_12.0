@@ -55,6 +55,14 @@ public class AudioManager : MonoBehaviour
     }
     public void Footsteps(bool state)
     {
+        if (state)
+        {
+            footstepsSource.gameObject.SetActive(true);
+        }
+        else
+        {
+            footstepsSource.gameObject.SetActive(false);
+        }
         footstepsSource.enabled = state;
     }
     

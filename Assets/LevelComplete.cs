@@ -9,9 +9,11 @@ public class LevelComplete : MonoBehaviour
     private enum Levels
     {
         MainMenu,
-        Level1,
-        Level2,
-        Level3
+        Level_1,
+        Level_2,
+        Level_3,
+        Level_4,
+        Level_5
     };
     [SerializeField] private Levels nextLevel;
     [SerializeField] private Animator transitionAnim;

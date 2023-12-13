@@ -24,9 +24,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu/Highscore.unity
     guid: 7b983534fcd6adb4d8ec50e55837c14a
   - enabled: 1
+    path: Assets/Scenes/Levels/Level_1.unity
+    guid: b6cd2491d645c71479a40de39ec1dc09
+  - enabled: 1
     path: Assets/Scenes/Levels/Level_2.unity
     guid: 7fe912dc4b95f464e8d2911bb07437b2
   - enabled: 1
     path: Assets/Scenes/Levels/Level_4.unity
     guid: fdd66338755634cdea62475430dee4ca
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_3.unity
+    guid: 2bda9acf3179c3448bc6ba889bddc7ec
+  - enabled: 1
+    path: Assets/Scenes/Levels/Level_5.unity
+    guid: 762c767e5c9bace4496b4161f3125a50
   m_configObjects: {}

@@ -62535,6 +62535,10 @@ PrefabInstance:
       value: 8.9
       objectReference: {fileID: 0}
     - target: {fileID: 5283653044785357857, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
+      propertyPath: nextLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283653044785357857, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
       propertyPath: transitionAnim
       value: 
       objectReference: {fileID: 1835196643}

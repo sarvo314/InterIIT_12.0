@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
     [SerializeField] private GameManager gameManager;
     private void Awake()
     {
+        // AudioManager.Instance.f;
         IsDead = false;
         CountStars = 0;
         // allowOnly2DMotion = true;
