@@ -1235,6 +1235,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1906747023}
   - component: {fileID: 1906747024}
+  - component: {fileID: 1906747025}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1311,10 +1312,23 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.504
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1906747025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1906747022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ee19cce8c394b169dc7c0d329b274c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeSlider: {fileID: 1906747024}
 --- !u!1 &75831067821665459
 GameObject:
   m_ObjectHideFlags: 0

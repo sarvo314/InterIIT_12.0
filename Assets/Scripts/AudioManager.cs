@@ -5,7 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     [SerializeField]
-    private AudioSource musicSource, effectsSource;
+    private AudioSource musicSource, effectsSource, footstepsSource;
     public static AudioManager Instance;
     
     void Start()
@@ -31,10 +31,17 @@ public class AudioManager : MonoBehaviour
         }
         effectsSource.PlayOneShot(audioClip);
     }
+    
+    public void PlayMusic(AudioClip audioClip)
+    {
+        musicSource.clip = audioClip;
+        musicSource.Play();
+    }
 
     public void ChangeMasterVolume(float value)
     {
         AudioListener.volume = value;
+        Debug.Log("master volume is " + value);
     }
 
     public void ToggleEffects()
@@ -45,6 +52,10 @@ public class AudioManager : MonoBehaviour
     public void ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
+    }
+    public void Footsteps(bool state)
+    {
+        footstepsSource.enabled = state;
     }
     
 }

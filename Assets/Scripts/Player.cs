@@ -24,7 +24,7 @@ public class Player : MonoBehaviour
     [SerializeField] private bool allowOnly2DMotion;
     [SerializeField] private float sweepDistanceMultiplier;
     [SerializeField] private GameInput gameInput;
-    
+    [SerializeField] private AudioClip jumpSound;
     private bool onPlatform;
     [SerializeField] private float offsetAboveGround;
     [SerializeField] private AudioClip playerDied;
@@ -69,6 +69,7 @@ public class Player : MonoBehaviour
         Debug.Log("move dir is " + moveDir);
         // For animation
         isWalking = moveDir != Vector3.zero;
+        AudioManager.Instance.Footsteps(isWalking);
         if (moveDir != Vector3.zero)
         {
             gameManager.isGameStarted = true;
@@ -135,6 +136,7 @@ public class Player : MonoBehaviour
     {
         if (isGrounded && IsDead == false)
         {
+            AudioManager.Instance.PlayAudio(jumpSound);
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
