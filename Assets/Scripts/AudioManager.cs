@@ -60,13 +60,13 @@ public class AudioManager : MonoBehaviour
         if(state && canPlayFootsteps)
         {
             // footstepsSource.PlayOneShot();
-            Debug.Log("footstoeps started");
+            //Debug.Log("footstoeps started");
             StartCoroutine(footstepCooldown());
 
         }
         else
         {
-            Debug.Log(("footsteps stopped"));
+            //Debug.Log(("footsteps stopped"));
             // footstepsSource.Stop();
         }
     }
