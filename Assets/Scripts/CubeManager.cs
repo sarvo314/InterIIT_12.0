@@ -7,6 +7,7 @@ public class CubeManager : MonoBehaviour
     [SerializeField] private CubeClick[] cubes; // Array to hold all the cube objects
     [SerializeField] private GameObject jailDoor;
     [SerializeField] private AudioClip openSound;
+    [SerializeField] private Player player;
     [SerializeField] private Jail_Door_Instruction jailDoorInstruction;
     // Function to handle click on a cube
     public void OnCubeClicked(CubeClick clickedCube)
@@ -42,6 +43,7 @@ public class CubeManager : MonoBehaviour
             jailDoor.SetActive(false);
             AudioManager.Instance.PlayAudio(openSound);
             this.gameObject.SetActive(false);
+            player.canMove = true;
             Destroy(jailDoorInstruction.gameObject);
         }
     }
@@ -57,7 +59,7 @@ public class CubeManager : MonoBehaviour
     }
     */
 
-    private bool Win()
+    public bool Win()
     {
         bool isWon = true;
         foreach(var cube in cubes)

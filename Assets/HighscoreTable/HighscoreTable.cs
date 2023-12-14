@@ -24,24 +24,26 @@ public class HighscoreTable : MonoBehaviour {
 
     
     private void Awake() {
+        // PlayerPrefs.DeleteAll();
         entryContainer = transform.Find("highscoreEntryContainer");
         entryTemplate = entryContainer.Find("highscoreEntryTemplate");
 
         entryTemplate.gameObject.SetActive(false);
-
-        AddHighscoreEntry(PlayerPrefs.GetInt("HIGHSCORE"), PlayerPrefs.GetString("USERNAME"));
+        Debug.Log("We have highscore from highscore table " + PlayerPrefs.GetFloat("HIGHSCORE") + " and user name " + PlayerPrefs.GetString("USERNAME", null));
+        AddHighscoreEntry(PlayerPrefs.GetFloat("HIGHSCORE"), PlayerPrefs.GetString("USERNAME", null));
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
 
         if (highscores == null) {
             // There's no stored table, initialize
             Debug.Log("Initializing table with default values...");
-            AddHighscoreEntry(1000000, "CMK");
-            AddHighscoreEntry(897621, "JOE");
-            AddHighscoreEntry(872931, "DAV");
-            AddHighscoreEntry(785123, "CAT");
-            AddHighscoreEntry(542024, "MAX");
-            AddHighscoreEntry(68245, "AAA");
+            AddHighscoreEntry(80.23f, "SHI");
+            
+            AddHighscoreEntry(90.12f, "SHL");
+            AddHighscoreEntry(80.12f, "RIT");
+            AddHighscoreEntry(92.31f, "SAV");
+            // AddHighscoreEntry(542024, "MAX");
+            // AddHighscoreEntry(68245, "AAA");
             // Reload
             jsonString = PlayerPrefs.GetString("highscoreTable");
             highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -51,7 +53,7 @@ public class HighscoreTable : MonoBehaviour {
         // Sort entry list by Score
         for (int i = 0; i < highscores.highscoreEntryList.Count; i++) {
             for (int j = i + 1; j < highscores.highscoreEntryList.Count; j++) {
-                if (highscores.highscoreEntryList[j].score > highscores.highscoreEntryList[i].score) {
+                if (highscores.highscoreEntryList[j].score < highscores.highscoreEntryList[i].score) {
                     // Swap
                     HighscoreEntry tmp = highscores.highscoreEntryList[i];
                     highscores.highscoreEntryList[i] = highscores.highscoreEntryList[j];
@@ -64,6 +66,7 @@ public class HighscoreTable : MonoBehaviour {
         foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) {
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
+        // PlayerPrefs.DeleteKey("highScoreTable");
     }
 
     private void CreateHighscoreEntryTransform(HighscoreEntry highscoreEntry, Transform container, List<Transform> transformList) {
@@ -86,9 +89,9 @@ public class HighscoreTable : MonoBehaviour {
 
         entryTransform.Find("posText").GetComponent<Text>().text = rankString;
 
-        int score = highscoreEntry.score;
+        float score = highscoreEntry.score;
 
-        entryTransform.Find("scoreText").GetComponent<Text>().text = score.ToString();
+        entryTransform.Find("scoreText").GetComponent<Text>().text = FormatTime(score);
 
         string name = highscoreEntry.name;
         entryTransform.Find("nameText").GetComponent<Text>().text = name;
@@ -98,9 +101,9 @@ public class HighscoreTable : MonoBehaviour {
         
         // Highlight First
         if (rank == 1) {
-            entryTransform.Find("posText").GetComponent<Text>().color = Color.green;
-            entryTransform.Find("scoreText").GetComponent<Text>().color = Color.green;
-            entryTransform.Find("nameText").GetComponent<Text>().color = Color.green;
+            // entryTransform.Find("posText").GetComponent<Text>().color = Color.green;
+            // entryTransform.Find("scoreText").GetComponent<Text>().color = Color.green;
+            // entryTransform.Find("nameText").GetComponent<Text>().color = Color.green;
         }
 
         // Set tropy
@@ -122,8 +125,17 @@ public class HighscoreTable : MonoBehaviour {
 
         transformList.Add(entryTransform);
     }
+    string FormatTime(float totalSeconds)
+    {
+        int minutes = Mathf.FloorToInt(totalSeconds / 60);
+        int seconds = Mathf.FloorToInt(totalSeconds % 60);
 
-    private void AddHighscoreEntry(int score, string name) {
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    private void AddHighscoreEntry(float score, string name)
+    {
+        if (string.IsNullOrEmpty(name)) return;  
+        if (name == "" || name == null) return;
         // Create HighscoreEntry
         HighscoreEntry highscoreEntry = new HighscoreEntry { score = score, name = name };
         
@@ -156,7 +168,7 @@ public class HighscoreTable : MonoBehaviour {
      * */
     [System.Serializable] 
     private class HighscoreEntry {
-        public int score;
+        public float score;
         public string name;
     }
 

@@ -13,6 +13,7 @@ public class Player : MonoBehaviour
     private Rigidbody playerRb;
     public static bool isGrounded;
     private bool isWalking;
+    public bool canMove = true;
     [SerializeField] private Transform groundCheck;
 
     [SerializeField] private float groundDistance;
@@ -218,7 +219,7 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         isGrounded = Physics.CheckSphere(groundCheck.transform.position, groundDistance, groundMask);
-        if(!IsDead)
+        if(!IsDead && canMove)
             HandleMovement();
     }
 }

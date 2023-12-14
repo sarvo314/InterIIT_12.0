@@ -5,12 +5,12 @@ using UnityEngine;
 
 public class FloorCollapse : MonoBehaviour
 {
-    [SerializeField] private GameObject navMeshLinks;
+    // [SerializeField] private GameObject navMeshLinks;
     [SerializeField] private GameObject mimic;
     [SerializeField] private BreakableTile[] floorTiles;
     [SerializeField] private GameObject NMLfloorRight;
     [SerializeField] private GameObject NMLfloorLeft;
-    private float delay = 15;
+    private float delay = 25;
     private float difference = 0.1f;
     // Start is called before the first frame update
     void Start()
@@ -27,10 +27,11 @@ public class FloorCollapse : MonoBehaviour
         tile.BreakTileSequence();
     }
 
+    /*
     private void DeactivateNavMashLinks()
     {
         navMeshLinks.SetActive(false);
-    }
+    }*/
 
     private void OnTriggerEnter(Collider other)
     {
@@ -51,9 +52,11 @@ public class FloorCollapse : MonoBehaviour
             BreakTile(tile);
             delay = difference;
         }
+        /*
         if (mimic.transform.position.y < 4)
         {
             DeactivateNavMashLinks();
         }
+        */
     }
 }

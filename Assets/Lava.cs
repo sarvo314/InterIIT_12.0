@@ -8,6 +8,7 @@ public class Lava : MonoBehaviour
     private Renderer rend;
     private Material lavaMaterial;
     private Vector2 offset;
+    [SerializeField] private Mimic mimic;
     [SerializeField] private float lavaSpeed;
 
     void Start()
