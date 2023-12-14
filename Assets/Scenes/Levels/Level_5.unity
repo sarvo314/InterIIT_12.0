@@ -782,7 +782,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &85609755
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1050,8 +1050,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: NEW
   isGameStarted: 0
+  highScore: 0
   level: 5
   nameField: {fileID: 0}
+  setUserName: {fileID: 0}
   bestTimes: []
   completeLevelText: {fileID: 0}
   checkForLevelCompletion: 0
@@ -2435,7 +2437,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 943007521}
-  m_Father: {fileID: 815047657}
+  m_Father: {fileID: 1979398956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -3962,11 +3964,11 @@ RectTransform:
   - {fileID: 1111621079}
   m_Father: {fileID: 223460409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.7, y: -14.6}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -14, y: 0}
   m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!4 &367795060 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7120193481087391311, guid: 750742fc7fb4f45ccb091b31de9aa5e3, type: 3}
@@ -8265,7 +8267,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2123185160}
-  m_Father: {fileID: 815047657}
+  m_Father: {fileID: 1979398956}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -8398,11 +8400,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 223460409}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0.00011444092, y: 25}
   m_SizeDelta: {x: 800, y: 50}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &756573640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8423,7 +8425,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use                 to Move
+  m_text: Use             to Move
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -16719,7 +16721,7 @@ PrefabInstance:
     - target: {fileID: 5283653044785357857, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
       propertyPath: transitionAnim
       value: 
-      objectReference: {fileID: 807421028}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 2778321814509050532, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
@@ -20299,7 +20301,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -156, y: 0}
+  m_AnchoredPosition: {x: -79, y: 0}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901670295
@@ -21750,6 +21752,11 @@ PrefabInstance:
       addedObject: {fileID: 187240746}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb15a2af745c6ab4d95af0cee0c150c1, type: 3}
+--- !u!224 &1979398956 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3367528167972702351, guid: cb15a2af745c6ab4d95af0cee0c150c1, type: 3}
+  m_PrefabInstance: {fileID: 1979398955}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1984129819
 GameObject:
   m_ObjectHideFlags: 0
@@ -21963,7 +21970,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2005415567
 RectTransform:
   m_ObjectHideFlags: 0
@@ -25798,3 +25805,6 @@ SceneRoots:
   - {fileID: 961378389}
   - {fileID: 1925654177}
   - {fileID: 1002480494}
+  - {fileID: 432875031}
+  - {fileID: 1979398955}
+  - {fileID: 1798727527}
