@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelComplete : MonoBehaviour
 {
+    [SerializeField] private GameManager gameManager;
     private enum Levels
     {
         MainMenu,
@@ -23,8 +24,16 @@ public class LevelComplete : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneManager.LoadScene(nextLevel.ToString());
+            FinishLevel();
         }
+        
     }
+
+    private void FinishLevel()
+    {
+        gameManager.FinishLevel();
+    }
+    
     IEnumerator LoadScene(string sceneName)
     {
         transitionAnim.SetTrigger("End");

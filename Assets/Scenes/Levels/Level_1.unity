@@ -784,8 +784,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4719135993928401db63b58ad89b9b30, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  userName: NEW
   isGameStarted: 0
+  level: 1
   nameField: {fileID: 0}
+  bestTimes: []
+  completeLevelText: {fileID: 0}
+  checkForLevelCompletion: 0
 --- !u!4 &87021631
 Transform:
   m_ObjectHideFlags: 0
@@ -5005,6 +5010,7 @@ MonoBehaviour:
   musicSource: {fileID: 228972473}
   effectsSource: {fileID: 547275966}
   footstepsSource: {fileID: 0}
+  footsteps: {fileID: 0}
 --- !u!4 &385779693
 Transform:
   m_ObjectHideFlags: 0
@@ -8840,6 +8846,10 @@ PrefabInstance:
       propertyPath: nextLevel
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5283653044785357857, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 87021630}
     - target: {fileID: 5283653044785357857, guid: c7fd2d857d62b47048403248fad4b7eb, type: 3}
       propertyPath: transitionAnim
       value: 
