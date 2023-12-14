@@ -39,7 +39,10 @@ public class Lava : MonoBehaviour
         // Apply the new offset to the material
         lavaMaterial.SetTextureOffset("_MainTex", offset);
     }
-
+    public void SetLavaSpeed(float speed)
+    {
+        lavaSpeed = speed;
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))

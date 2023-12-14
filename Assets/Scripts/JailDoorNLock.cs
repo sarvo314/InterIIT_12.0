@@ -17,7 +17,10 @@ public class JailDoorNLock : MonoBehaviour
     {
         gameInput.InteractPerformed += StartMinigame;
     }
-
+    public bool CanUnlock()
+    {
+        return canUnlock;
+    }
     private void StartMinigame(object sender, EventArgs e)
     {
         if (canUnlock)

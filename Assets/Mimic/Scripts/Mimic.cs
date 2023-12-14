@@ -7,7 +7,7 @@ namespace MimicSpace
     public class Mimic : MonoBehaviour
     {
         [SerializeField] private AudioClip mimicDeath;
-
+        [SerializeField] private Lava[] lava;
         [Header("Animation")]
         public GameObject legPrefab;
 
@@ -168,9 +168,18 @@ namespace MimicSpace
 
         public void Death()
         {
+            IncreaseLavaSpeed();
             AudioManager.Instance.PlayAudio(mimicDeath);
             Debug.Log("Mimic is die");
             this.gameObject.SetActive(false);
+        }
+
+        private void IncreaseLavaSpeed()
+        {
+            foreach (Lava lavaTile in lava)
+            {
+               lavaTile.SetLavaSpeed(1.5f); 
+            }
         }
     }
 

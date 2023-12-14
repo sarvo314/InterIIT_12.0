@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     private AudioSource musicSource, effectsSource, footstepsSource;
     public static AudioManager Instance;
+    [SerializeField] private Footsteps footsteps;
     
     void Start()
     {
@@ -53,17 +54,28 @@ public class AudioManager : MonoBehaviour
     {
         musicSource.mute = !musicSource.mute;
     }
+    bool canPlayFootsteps = true;
     public void Footsteps(bool state)
     {
-        if (state)
+        if(state && canPlayFootsteps)
         {
-            footstepsSource.gameObject.SetActive(true);
+            // footstepsSource.PlayOneShot();
+            Debug.Log("footstoeps started");
+            StartCoroutine(footstepCooldown());
+
         }
         else
         {
-            footstepsSource.gameObject.SetActive(false);
+            Debug.Log(("footsteps stopped"));
+            // footstepsSource.Stop();
         }
-        footstepsSource.enabled = state;
+    }
+    IEnumerator footstepCooldown()
+    {
+        canPlayFootsteps = false;
+        footstepsSource.PlayOneShot(footsteps.GetFootstep());
+        yield return new WaitForSeconds(0.2f);
+        canPlayFootsteps = true;
     }
     
 }

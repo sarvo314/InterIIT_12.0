@@ -70,7 +70,8 @@ public class Player : MonoBehaviour
         // Debug.Log("move dir is " + moveDir);
         // For animation
         isWalking = moveDir != Vector3.zero;
-        AudioManager.Instance.Footsteps(isWalking);
+        if(isGrounded)
+            AudioManager.Instance.Footsteps(isWalking);
         if (moveDir != Vector3.zero)
         {
             gameManager.isGameStarted = true;
