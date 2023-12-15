@@ -34,6 +34,7 @@ public class JailDoorNLock : MonoBehaviour
                 player.canMove = false;
                 gameInput.InteractPerformed -= StartMinigame;
                 instruction.SetActive(false);
+                if(instruction != null) Destroy(instruction);
             }
             else
             {
@@ -48,7 +49,7 @@ public class JailDoorNLock : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canUnlock = true;
-            if(instruction.activeSelf == false)
+            if(instruction.activeSelf == false && Mimic.activeSelf == false)
                 instruction.SetActive(true);
         }
     }
