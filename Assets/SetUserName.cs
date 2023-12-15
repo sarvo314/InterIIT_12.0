@@ -21,6 +21,7 @@ public class SetUserName : MonoBehaviour
         nameField.text = "N A M E : " + PlayerPrefs.GetString(USERNAME);
         // PlayerPrefs.SetString("USERNAME", gameManager.userName);
         Debug.Log("Player name is " + nameField.text);
+        gameManager.ResetAll();
     }
     
 

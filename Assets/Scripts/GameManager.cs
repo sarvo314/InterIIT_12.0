@@ -143,7 +143,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void ResetAll()
+     public void ResetAll()
     {
         for (int i = 1; i <= 5; i++)
         {
