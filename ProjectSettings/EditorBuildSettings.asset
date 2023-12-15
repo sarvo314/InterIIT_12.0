@@ -41,4 +41,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Levels/GameComplete.unity
     guid: 48caf336f3dd14879b8ec3d28c8f2e9d
+  - enabled: 1
+    path: Assets/Scenes/Levels/Oneto2.unity
+    guid: 8c1ed8563c3e95c4e9e8965eb97f8dcb
+  - enabled: 1
+    path: Assets/Scenes/Levels/Fourto5.unity
+    guid: 43e330b68c06d674e92d9582408a70dd
   m_configObjects: {}

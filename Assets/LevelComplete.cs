@@ -15,7 +15,9 @@ public class LevelComplete : MonoBehaviour
         Level_3,
         Level_4,
         Level_5,
-        GameComplete
+        GameComplete,
+        Oneto2,
+        Fourto5
     };
     [SerializeField] private Levels nextLevel;
     [SerializeField] private Animator transitionAnim;
