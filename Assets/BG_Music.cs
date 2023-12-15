@@ -10,6 +10,6 @@ public class BG_Music : MonoBehaviour
     void Start()
     {
         AudioManager.Instance.PlayMusic(bgMusic_calm);
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
     }
 }
