@@ -41,20 +41,21 @@ public class GameManager : MonoBehaviour
         {
             
             // AllLevelsCompleted();
-            if(highScore == 0)
-                highScore = TotalTimeTaken();
+            // if(highScore == 0)
+            highScore = TotalTimeTaken();
             PlayerPrefs.SetFloat(HIGHSCORE, highScore);
             Debug.Log("highscore is " + highScore);
         }
     }
     private float TotalTimeTaken()
     {
+        float score = 0;
         for (int i = 1; i <= 5; i++)
         {
-            highScore += bestTimes[i];
+            score += bestTimes[i];
         }
 
-        return highScore;
+        return score;
     }
     private bool AllLevelsCompleted()
     {
@@ -105,6 +106,9 @@ public class GameManager : MonoBehaviour
     public void SetUserName()
     {
         userName = nameField.text;
+        PlayerPrefs.DeleteKey(USERNAME);
+        PlayerPrefs.SetFloat(HIGHSCORE, 0);
+        highScore = 0;
         PlayerPrefs.SetString(USERNAME, userName);
         PlayerPrefs.Save();
         //Reset score values

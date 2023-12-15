@@ -9,6 +9,7 @@ public class SetUserName : MonoBehaviour
     private GameManager gameManager;
     private TextMeshProUGUI nameField;
     private const string USERNAME = "USERNAME";
+    private const string HIGHSCORE = "HIGHSCORE";
     // Start is called before the first frame update
     void Start()
     {
