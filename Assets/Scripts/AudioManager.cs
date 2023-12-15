@@ -45,14 +45,16 @@ public class AudioManager : MonoBehaviour
         Debug.Log("master volume is " + value);
     }
 
-    public void ToggleEffects()
+    public bool ToggleEffects()
     {
         effectsSource.mute = !effectsSource.mute;
+        return effectsSource.mute;
     }
 
-    public void ToggleMusic()
+    public bool ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
+        return musicSource.mute;
     }
     bool canPlayFootsteps = true;
     public void Footsteps(bool state)

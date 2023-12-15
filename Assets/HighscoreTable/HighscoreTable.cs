@@ -12,6 +12,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 // using CodeMonkey.Utils;
@@ -63,13 +64,28 @@ public class HighscoreTable : MonoBehaviour {
                 }
             }
         }
-
         highscoreEntryTransformList = new List<Transform>();
-        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) 
+        int k = 0;
+        // HighScoreEntry
+        int totalEntries = 10;
+        foreach (HighscoreEntry highScoreEntry in highscores.highscoreEntryList)
         {
-            // DeviceType
-            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+            if (k < totalEntries)
+                CreateHighscoreEntryTransform(highScoreEntry, entryContainer, highscoreEntryTransformList);
+            else
+            {
+                PlayerPrefs.DeleteKey("highscoreTable");
+
+                break;
+            }
+            ++k;
         }
+
+        // foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) 
+        // {
+        //     // DeviceType
+        //     CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+        // }
         // PlayerPrefs.DeleteKey("highScoreTable");
     }
 
@@ -91,14 +107,14 @@ public class HighscoreTable : MonoBehaviour {
         case 3: rankString = "3RD"; break;
         }
 
-        entryTransform.Find("posText").GetComponent<Text>().text = rankString;
+        entryTransform.Find("posText").GetComponent<TextMeshProUGUI>().text = rankString;
 
         float score = highscoreEntry.score;
 
-        entryTransform.Find("scoreText").GetComponent<Text>().text = FormatTime(score);
+        entryTransform.Find("scoreText").GetComponent<TextMeshProUGUI>().text = FormatTime(score);
 
         string name = highscoreEntry.name;
-        entryTransform.Find("nameText").GetComponent<Text>().text = name;
+        entryTransform.Find("nameText").GetComponent<TextMeshProUGUI>().text = name;
 
         // Set background visible odds and evens, easier to read
         entryTransform.Find("background").gameObject.SetActive(rank % 2 == 1);

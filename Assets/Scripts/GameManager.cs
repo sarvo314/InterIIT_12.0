@@ -107,6 +107,8 @@ public class GameManager : MonoBehaviour
         userName = nameField.text;
         PlayerPrefs.SetString(USERNAME, userName);
         PlayerPrefs.Save();
+        //Reset score values
+        // ResetAll();
         Debug.Log("Name is " + userName);
     }
     private void RestartLevel(object sender, EventArgs eventArgs)
@@ -138,6 +140,15 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetFloat("BestTime_Level_" + currentLevel, levelTime); // Save the best time to PlayerPrefs
             Debug.Log("finished level " + currentLevel + " in " + levelTime + " seconds");
             PlayerPrefs.Save(); // Save PlayerPrefs to disk
+        }
+    }
+
+    private void ResetAll()
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            PlayerPrefs.SetFloat("BestTime_Level_" + i, 0);
+            bestTimes[i] = 0; // Load best times from PlayerPrefs
         }
     }
 
