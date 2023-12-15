@@ -7,7 +7,7 @@ public class PlayerBelowRequired : MonoBehaviour
     [SerializeField] private Player player;
 
     private void OnTriggerEnter(Collider other) {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("Ball"))
         {
             player.Die();
         }
