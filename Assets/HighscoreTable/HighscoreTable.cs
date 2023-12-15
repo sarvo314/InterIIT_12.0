@@ -21,7 +21,7 @@ public class HighscoreTable : MonoBehaviour {
     private Transform entryContainer;
     private Transform entryTemplate;
     private List<Transform> highscoreEntryTransformList;
-
+    [SerializeField] private GameManager gameManager;
     
     private void Awake() {
         // PlayerPrefs.DeleteAll();
@@ -29,7 +29,9 @@ public class HighscoreTable : MonoBehaviour {
         entryTemplate = entryContainer.Find("highscoreEntryTemplate");
 
         entryTemplate.gameObject.SetActive(false);
-        Debug.Log("We have highscore from highscore table " + PlayerPrefs.GetFloat("HIGHSCORE") + " and user name " + PlayerPrefs.GetString("USERNAME", null));
+        // Debug.Log("We have highscore from highscore table " + PlayerPrefs.GetFloat("HIGHSCORE") + " and user name " + PlayerPrefs.GetString("USERNAME", null));
+        // AddHighscoreEntry(PlayerPrefs.GetFloat("HIGHSCORE"), PlayerPrefs.GetString("USERNAME", null));
+        // Debug.Log("we have to add entry" + gameManager.highScore + " " + gameManager.userName);
         AddHighscoreEntry(PlayerPrefs.GetFloat("HIGHSCORE"), PlayerPrefs.GetString("USERNAME", null));
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -63,7 +65,9 @@ public class HighscoreTable : MonoBehaviour {
         }
 
         highscoreEntryTransformList = new List<Transform>();
-        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) {
+        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) 
+        {
+            // DeviceType
             CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
         }
         // PlayerPrefs.DeleteKey("highScoreTable");
@@ -98,7 +102,7 @@ public class HighscoreTable : MonoBehaviour {
 
         // Set background visible odds and evens, easier to read
         entryTransform.Find("background").gameObject.SetActive(rank % 2 == 1);
-        
+        Debug.Log("Spawned entry " + name + " " + FormatTime(score)); 
         // Highlight First
         if (rank == 1) {
             // entryTransform.Find("posText").GetComponent<Text>().color = Color.green;

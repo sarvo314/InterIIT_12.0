@@ -37,10 +37,10 @@ public class GameManager : MonoBehaviour
         LoadBestTimes(); // Load best times from PlayerPrefs
         
         StartLevel(level); // Start with level 0 (or your starting level)
-        if (checkForLevelCompletion)
+        if (checkForLevelCompletion && AllLevelsCompleted())
         {
             
-            AllLevelsCompleted();
+            // AllLevelsCompleted();
             if(highScore == 0)
                 highScore = TotalTimeTaken();
             PlayerPrefs.SetFloat(HIGHSCORE, highScore);
@@ -58,14 +58,16 @@ public class GameManager : MonoBehaviour
     }
     private bool AllLevelsCompleted()
     {
-        for (int i = 1; i <= bestTimes.Length; i++)
+        for (int i = 1; i <= 5; i++)
         {
             if (bestTimes[i] == 0)
             {
+                Debug.Log("one level is not complete");
                 completeLevelText.SetActive(true);
                 return false;
             }
         }
+        Debug.Log("all levels are complete");
         completeLevelText.SetActive(false);
         return true;
     }

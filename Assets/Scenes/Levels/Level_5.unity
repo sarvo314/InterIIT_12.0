@@ -10434,7 +10434,7 @@ PrefabInstance:
     - target: {fileID: 8179303427892404938, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
       propertyPath: bgMusic_calm
       value: 
-      objectReference: {fileID: 8300000, guid: 664a0897d3e8d43f49c30b6a1e96413e, type: 3}
+      objectReference: {fileID: 8300000, guid: e451734efd2e8477a866a2ca3df70fb7, type: 3}
     - target: {fileID: 9039016096781297301, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
       propertyPath: m_Name
       value: BG_Music
@@ -16129,7 +16129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1538615649
 Transform:
   m_ObjectHideFlags: 0
@@ -25805,6 +25805,6 @@ SceneRoots:
   - {fileID: 961378389}
   - {fileID: 1925654177}
   - {fileID: 1002480494}
-  - {fileID: 432875031}
   - {fileID: 1979398955}
+  - {fileID: 432875031}
   - {fileID: 1798727527}

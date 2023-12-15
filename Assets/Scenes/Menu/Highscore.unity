@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f281e6fa0c3c89947a22aac9de1bc66d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 1359045869}
 --- !u!1 &79197617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,8 +1971,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: NEW
   isGameStarted: 0
+  highScore: 0
   level: -1
   nameField: {fileID: 0}
+  setUserName: {fileID: 0}
   bestTimes: []
   completeLevelText: {fileID: 1359408767}
   checkForLevelCompletion: 1

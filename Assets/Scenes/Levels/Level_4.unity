@@ -9923,6 +9923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Instructions
       objectReference: {fileID: 0}
+    - target: {fileID: 3092447330341593199, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: Finst
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3262661329162751457, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -10003,8 +10007,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3912920471524876498, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912920471524876498, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00011444092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688882223732079166, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_text
+      value: 'Use           to Move
+
+
+        Collect all stars'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688882223732079166, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 8192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1836900937531275397, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
@@ -27997,7 +28041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &955030207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50243,8 +50287,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: NEW
   isGameStarted: 0
+  highScore: 0
   level: 4
   nameField: {fileID: 0}
+  setUserName: {fileID: 0}
   bestTimes: []
   completeLevelText: {fileID: 0}
   checkForLevelCompletion: 0
