@@ -7,6 +7,7 @@ public class ToggleAudio : MonoBehaviour
 {
     [SerializeField] private bool toggleMusic, toggleEffects;
     [SerializeField] private TextMeshProUGUI toggleMusicText, toggleEffectsText;
+    
     public void Toggle()
     {
         if (toggleMusic)
@@ -14,11 +15,11 @@ public class ToggleAudio : MonoBehaviour
 
             if (AudioManager.Instance.ToggleMusic())
             {
-                toggleMusicText.text = "MUSIC: ON";
+                toggleMusicText.text = "MUSIC: OFF";
             }
             else
             {
-                toggleMusicText.text = "MUSIC: OFF";
+                toggleMusicText.text = "MUSIC: ON";
             }
            
         }
@@ -28,11 +29,11 @@ public class ToggleAudio : MonoBehaviour
 
             if (AudioManager.Instance.ToggleEffects())
             {
-                toggleEffectsText.text = "EFFECTS: ON";
+                toggleEffectsText.text = "EFFECTS: OFF";
             }
             else
             {
-                toggleEffectsText.text = "EFFECTS: OFF";
+                toggleEffectsText.text = "EFFECTS: ON";
             }
         }
     }

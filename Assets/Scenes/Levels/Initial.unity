@@ -7421,6 +7421,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   transitionAnim: {fileID: 71686464}
+  button_click: {fileID: 8300000, guid: 6be40602f4c1446ba9079fd19eb3c093, type: 3}
 --- !u!114 &632566037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13779,6 +13780,18 @@ MonoBehaviour:
       - m_Target: {fileID: 632566036}
         m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: GoToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 632566036}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: PlayButtonClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -54336,7 +54349,7 @@ MonoBehaviour:
   minGrowCoef: 4.5
   maxGrowCoef: 6.5
   newLegCooldown: 0.3
-  velocity: {x: 0.70768034, y: 0, z: 0.6124953}
+  velocity: {x: 0.39709315, y: 0, z: 0.6413245}
 --- !u!33 &7024698622905062240
 MeshFilter:
   m_ObjectHideFlags: 0

@@ -24,12 +24,13 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(AudioClip audioClip)
     {
-        if(PauseMenu.isPaused){
-            effectsSource.pitch *= 0.5f;
-        }
-        else{
-            effectsSource.pitch *= 1f;
-        }
+        // if(PauseMenu.isPaused)
+        // {
+            // effectsSource.pitch *= 0.5f;
+        // }
+        // else{
+            // effectsSource.pitch *= 1f;
+        // }
         effectsSource.PlayOneShot(audioClip);
     }
     

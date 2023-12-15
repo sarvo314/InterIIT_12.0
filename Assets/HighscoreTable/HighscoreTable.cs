@@ -170,9 +170,25 @@ public class HighscoreTable : MonoBehaviour {
             };
         }
 
+        bool entryPresent = false;
+        foreach (var item in highscores.highscoreEntryList)
+        {
+            //if name is present update it
+            if (item.name == name)
+            {
+                if (score > item.score)
+                    item.score = score;
+                entryPresent = true;
+                break;
+            }
+        }
+
         // Add new entry to Highscores
-        highscores.highscoreEntryList.Add(highscoreEntry);
-        Debug.Log("We added entry" + name + " " + score);
+        if (!entryPresent)
+        {
+            highscores.highscoreEntryList.Add(highscoreEntry); 
+            Debug.Log("We added entry" + name + " " + score);
+        }
         // Save updated Highscores
         string json = JsonUtility.ToJson(highscores);
         PlayerPrefs.SetString("highscoreTable", json);

@@ -132,10 +132,8 @@ public class HighScoreTable : MonoBehaviour
             }
             ++k;
         }
-
-
-
     }
+
     private void CreateHighScoreEntryTransform(HighScoreEntry highScoreEntry,
         Transform container, List<Transform> transformList)
     {
@@ -188,6 +186,7 @@ public class HighScoreTable : MonoBehaviour
                 break;
             }
         }
+        
 
         if (!entryPresent) highscores.highscoreEntryList.Add(highscoreEntry);
         //highscores.highscoreEntryList.Add(highscoreEntry);

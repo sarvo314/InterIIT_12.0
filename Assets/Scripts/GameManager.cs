@@ -160,7 +160,6 @@ public class GameManager : MonoBehaviour
             bestTimes[i] = savedTime; // Load best times from PlayerPrefs
         }
     }
-    
     // Update is called once per frame
     void Update()
     {

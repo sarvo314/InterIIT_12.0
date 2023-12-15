@@ -13,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private GameObject HintButton;
     [SerializeField] private GameObject PauseButton;
     [SerializeField] private Animator transitionAnim;
+    [SerializeField] private AudioClip button_click;
     
     private void Awake() {
         scene = SceneManager.GetActiveScene().name;
@@ -59,7 +60,11 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu(){
         StartCoroutine(LoadScene(MAIN_MENU));
     }
-    
+
+    public void PlayButtonSound()
+    {
+        AudioManager.Instance.PlayAudio(button_click);
+    }
     public void Quit(){
 #if UNITY_EDITOR
         UnityEditor.EditorApplication.isPlaying = false;

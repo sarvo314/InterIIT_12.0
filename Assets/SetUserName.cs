@@ -13,12 +13,12 @@ public class SetUserName : MonoBehaviour
     void Start()
     {
         nameField = GetComponent<TextMeshProUGUI>();
-        nameField.text = "Your name: " + PlayerPrefs.GetString(USERNAME);
+        nameField.text = "N A M E : " + PlayerPrefs.GetString(USERNAME);
     }
     public void SetName()
     {
         // gameManager.userName = nameField.text;
-        nameField.text = PlayerPrefs.GetString(USERNAME); 
+        nameField.text = "N A M E : " + PlayerPrefs.GetString(USERNAME);
         // PlayerPrefs.SetString("USERNAME", gameManager.userName);
         Debug.Log("Player name is " + nameField.text);
     }
