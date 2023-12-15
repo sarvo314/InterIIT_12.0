@@ -9923,6 +9923,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Instructions
       objectReference: {fileID: 0}
+    - target: {fileID: 3092447330341593199, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: Finst
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 3262661329162751457, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -10003,8 +10007,48 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3912920471524876498, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3912920471524876498, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.00011444092
+      objectReference: {fileID: 0}
+    - target: {fileID: 7115881281183647033, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688882223732079166, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_text
+      value: 'Use           to Move
+
+
+        Collect all stars'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8688882223732079166, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
+      propertyPath: m_VerticalAlignment
+      value: 8192
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 1836900937531275397, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4433bb87171619f4aad46c128933edb1, type: 3}
@@ -27997,7 +28041,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &955030207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49273,6 +49317,67 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 5acda22f1694e4d188b53c2c8fb08867, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1001 &1666501911
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.125565
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.8100004
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 237980008332615782, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8179303427892404938, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: bgMusic_calm
+      value: 
+      objectReference: {fileID: 8300000, guid: d2aaa2f92e0dd4750ba76edf7c8f95d1, type: 3}
+    - target: {fileID: 9039016096781297301, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
+      propertyPath: m_Name
+      value: BG_Music
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 44740c27e0eea453a8a9d310f52dff09, type: 3}
 --- !u!1 &1668109447
 GameObject:
   m_ObjectHideFlags: 0
@@ -50243,8 +50348,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   userName: NEW
   isGameStarted: 0
+  highScore: 0
   level: 4
   nameField: {fileID: 0}
+  setUserName: {fileID: 0}
   bestTimes: []
   completeLevelText: {fileID: 0}
   checkForLevelCompletion: 0
@@ -63873,3 +63980,4 @@ SceneRoots:
   - {fileID: 1237597423}
   - {fileID: 5365586149660642484}
   - {fileID: 729088975}
+  - {fileID: 1666501911}
