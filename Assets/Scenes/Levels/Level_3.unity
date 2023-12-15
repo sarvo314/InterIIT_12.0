@@ -24635,7 +24635,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824335371323031329, guid: d13e69a73e31643b593422c170bd61c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -84532,7 +84532,6 @@ Transform:
   - {fileID: 1169633812}
   - {fileID: 1580680039}
   - {fileID: 2082680265}
-  - {fileID: 2015893356}
   - {fileID: 1648401096}
   - {fileID: 396221931}
   - {fileID: 2048659654}
@@ -87576,84 +87575,6 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 0}
   m_BuildHeightMesh: 0
---- !u!1001 &2015893355
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 1921622334}
-    m_Modifications:
-    - target: {fileID: 979873492421864585, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_Name
-      value: ForestCurve
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -3.39
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 3.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: d10b86d110729064f9b83800f884ab74, type: 3}
---- !u!4 &2015893356 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4306123383880720026, guid: d10b86d110729064f9b83800f884ab74, type: 3}
-  m_PrefabInstance: {fileID: 2015893355}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2016802504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93677,7 +93598,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5824335371323031329, guid: d13e69a73e31643b593422c170bd61c9, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
