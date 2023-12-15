@@ -20,6 +20,7 @@ public class Jail_Door_Instruction : MonoBehaviour
         if (other.gameObject.CompareTag("Player") && canUnlock)
         {
             Debug.Log("we unlock");
+            
             instruction.SetActive(true);
         }
     }

@@ -80,6 +80,7 @@ namespace MimicSpace
             velocity = new Vector3(randV.x, 0, randV.y);
             minimumAnchoredParts = minimumAnchoredLegs * partsPerLeg;
             maxLegDistance = newLegRadius * 2.1f;
+            Debug.Log(maxLegDistance);
 
         }
 

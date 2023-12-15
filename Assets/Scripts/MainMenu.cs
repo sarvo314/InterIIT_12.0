@@ -18,6 +18,7 @@ public class MainMenu : MonoBehaviour
     private const string INSTRUCTIONS = "Instructions";
     private const string OPTIONS = "Options";
     private const string HIGHSCORE = "Highscore";
+    [SerializeField] private AudioClip button_click;
     
     // Start is called before the first frame update
     void Start()
@@ -69,7 +70,11 @@ public class MainMenu : MonoBehaviour
         // SceneManager.LoadScene("Highscore");
         StartCoroutine(LoadScene(HIGHSCORE));
     }
-    
+
+    public void PlayButtonClickSound()
+    {
+        AudioManager.Instance.PlayAudio(button_click);
+    }
 
     public void Quit()
     {

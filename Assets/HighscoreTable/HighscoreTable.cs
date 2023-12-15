@@ -12,6 +12,7 @@
 
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 // using CodeMonkey.Utils;
@@ -21,7 +22,7 @@ public class HighscoreTable : MonoBehaviour {
     private Transform entryContainer;
     private Transform entryTemplate;
     private List<Transform> highscoreEntryTransformList;
-
+    [SerializeField] private GameManager gameManager;
     
     private void Awake() {
         // PlayerPrefs.DeleteAll();
@@ -29,7 +30,9 @@ public class HighscoreTable : MonoBehaviour {
         entryTemplate = entryContainer.Find("highscoreEntryTemplate");
 
         entryTemplate.gameObject.SetActive(false);
-        Debug.Log("We have highscore from highscore table " + PlayerPrefs.GetFloat("HIGHSCORE") + " and user name " + PlayerPrefs.GetString("USERNAME", null));
+        // Debug.Log("We have highscore from highscore table " + PlayerPrefs.GetFloat("HIGHSCORE") + " and user name " + PlayerPrefs.GetString("USERNAME", null));
+        // AddHighscoreEntry(PlayerPrefs.GetFloat("HIGHSCORE"), PlayerPrefs.GetString("USERNAME", null));
+        // Debug.Log("we have to add entry" + gameManager.highScore + " " + gameManager.userName);
         AddHighscoreEntry(PlayerPrefs.GetFloat("HIGHSCORE"), PlayerPrefs.GetString("USERNAME", null));
         string jsonString = PlayerPrefs.GetString("highscoreTable");
         Highscores highscores = JsonUtility.FromJson<Highscores>(jsonString);
@@ -61,11 +64,28 @@ public class HighscoreTable : MonoBehaviour {
                 }
             }
         }
-
         highscoreEntryTransformList = new List<Transform>();
-        foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) {
-            CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+        int k = 0;
+        // HighScoreEntry
+        int totalEntries = 10;
+        foreach (HighscoreEntry highScoreEntry in highscores.highscoreEntryList)
+        {
+            if (k < totalEntries)
+                CreateHighscoreEntryTransform(highScoreEntry, entryContainer, highscoreEntryTransformList);
+            else
+            {
+                PlayerPrefs.DeleteKey("highscoreTable");
+
+                break;
+            }
+            ++k;
         }
+
+        // foreach (HighscoreEntry highscoreEntry in highscores.highscoreEntryList) 
+        // {
+        //     // DeviceType
+        //     CreateHighscoreEntryTransform(highscoreEntry, entryContainer, highscoreEntryTransformList);
+        // }
         // PlayerPrefs.DeleteKey("highScoreTable");
     }
 
@@ -87,18 +107,18 @@ public class HighscoreTable : MonoBehaviour {
         case 3: rankString = "3RD"; break;
         }
 
-        entryTransform.Find("posText").GetComponent<Text>().text = rankString;
+        entryTransform.Find("posText").GetComponent<TextMeshProUGUI>().text = rankString;
 
         float score = highscoreEntry.score;
 
-        entryTransform.Find("scoreText").GetComponent<Text>().text = FormatTime(score);
+        entryTransform.Find("scoreText").GetComponent<TextMeshProUGUI>().text = FormatTime(score);
 
         string name = highscoreEntry.name;
-        entryTransform.Find("nameText").GetComponent<Text>().text = name;
+        entryTransform.Find("nameText").GetComponent<TextMeshProUGUI>().text = name;
 
         // Set background visible odds and evens, easier to read
         entryTransform.Find("background").gameObject.SetActive(rank % 2 == 1);
-        
+        Debug.Log("Spawned entry " + name + " " + FormatTime(score)); 
         // Highlight First
         if (rank == 1) {
             // entryTransform.Find("posText").GetComponent<Text>().color = Color.green;
@@ -150,9 +170,25 @@ public class HighscoreTable : MonoBehaviour {
             };
         }
 
+        bool entryPresent = false;
+        foreach (var item in highscores.highscoreEntryList)
+        {
+            //if name is present update it
+            if (item.name == name)
+            {
+                if (score > item.score)
+                    item.score = score;
+                entryPresent = true;
+                break;
+            }
+        }
+
         // Add new entry to Highscores
-        highscores.highscoreEntryList.Add(highscoreEntry);
-        Debug.Log("We added entry" + name + " " + score);
+        if (!entryPresent)
+        {
+            highscores.highscoreEntryList.Add(highscoreEntry); 
+            Debug.Log("We added entry" + name + " " + score);
+        }
         // Save updated Highscores
         string json = JsonUtility.ToJson(highscores);
         PlayerPrefs.SetString("highscoreTable", json);

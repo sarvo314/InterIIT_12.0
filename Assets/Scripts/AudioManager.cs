@@ -24,12 +24,13 @@ public class AudioManager : MonoBehaviour
 
     public void PlayAudio(AudioClip audioClip)
     {
-        if(PauseMenu.isPaused){
-            effectsSource.pitch *= 0.5f;
-        }
-        else{
-            effectsSource.pitch *= 1f;
-        }
+        // if(PauseMenu.isPaused)
+        // {
+            // effectsSource.pitch *= 0.5f;
+        // }
+        // else{
+            // effectsSource.pitch *= 1f;
+        // }
         effectsSource.PlayOneShot(audioClip);
     }
     
@@ -45,14 +46,16 @@ public class AudioManager : MonoBehaviour
         Debug.Log("master volume is " + value);
     }
 
-    public void ToggleEffects()
+    public bool ToggleEffects()
     {
         effectsSource.mute = !effectsSource.mute;
+        return effectsSource.mute;
     }
 
-    public void ToggleMusic()
+    public bool ToggleMusic()
     {
         musicSource.mute = !musicSource.mute;
+        return musicSource.mute;
     }
     bool canPlayFootsteps = true;
     public void Footsteps(bool state)
