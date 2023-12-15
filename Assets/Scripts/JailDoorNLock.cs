@@ -13,9 +13,11 @@ public class JailDoorNLock : MonoBehaviour
     [SerializeField] private GameObject Mimic;
     [SerializeField] private bool canUnlock;
     [SerializeField] private Player player;
+    [SerializeField] private GameObject instruction;
     // Start is called before the first frame update
     void Start()
     {
+        instruction.SetActive(false);
         gameInput.InteractPerformed += StartMinigame;
     }
     public bool CanUnlock()
@@ -31,6 +33,7 @@ public class JailDoorNLock : MonoBehaviour
                 Lock.gameObject.SetActive(true);
                 player.canMove = false;
                 gameInput.InteractPerformed -= StartMinigame;
+                instruction.SetActive(false);
             }
             else
             {
@@ -45,6 +48,8 @@ public class JailDoorNLock : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             canUnlock = true;
+            if(instruction.activeSelf == false)
+                instruction.SetActive(true);
         }
     }
 
@@ -52,6 +57,8 @@ public class JailDoorNLock : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if(instruction.activeSelf) instruction.SetActive(false);
+                
             canUnlock = false;
         }
     }
